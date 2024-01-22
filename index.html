@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia del Editor</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+
+<body>
+    <div class="popup" id="credits">
+        <div class="dialog">
+            <img class="arrow left hidden" src="/assets/img/left.png">
+            <img class="close" src="/assets/img/close.png"
+                onclick="document.getElementById('credits').style.display = 'none'">
+            <div class="credits-page 01">
+                <span>Creditos</span>
+                <img class="icon" src="/assets/img/credits/whisp.png">
+                <a href="https://youtube.com/@ItsWhisp" target="_blank" class="gold">ItsWhisp</a>
+                <span class="small">Diseño de la pagina</span>
+            </div>
+            <div class="credits-page 02 hidden">
+                <span>Creditos</span>
+                <img class="icon" style="height: 60px; padding: 10px 0;" src="/assets/img/credits/jorge603.gif">
+                <a href="https://youtube.com/@Jorge603" target="_blank" class="gold">Jorge603</a>
+                <span class="small">Hosting web y dominio</span>
+            </div>
+            <div class="credits-page 03 hidden">
+                <span style="color: rgb(0, 255, 0);">Agradecimientos<br>Especiales</span>
+                <div class="thanks-container">
+                    <div class="thanks-item">
+                        <img class="icon" style="height: 60px; padding: 10px 0;" src="/assets/img/credits/colon.png">
+                        <span class="gold">Colon</span>
+                        <span class="small">Parte del codigo de la interfaz</span>
+                        <a href="https://gdbrowser.com/" class="smaller">(GD Browser)</a>
+                    </div>
+                </div>
+            </div>
+            <img class="arrow right" src="/assets/img/right.png">
+        </div>
+    </div>
+    <img class="logo" src="/assets/img/logo.png">
+    <span>Guia del editor</span>
+    <span class="gold small">(En Construccion)</span>
+    <div class="section menu">
+        <a data-tippy-content="Servidor de Discord de Geometry Dash Español" class="menu-button disabled"><img
+                src="/assets/img/buttons/discord.png"></a>
+        <a data-tippy-content="Guia oficial del editor (En Ingles)"
+            href="https://www.robtopgames.com/files/GDEditor.pdf" target="_blank" class="menu-button"><img
+                src="/assets/img/buttons/guia-oficial.png"></a>
+        <a data-tippy-content="Creditos y agradecimientos especiales" href="#"
+            onclick="document.getElementById('credits').style.display = 'flex'" class="menu-button"><img
+                src="/assets/img/buttons/creditos.png"></a>
+    </div>
+    <div class="section">
+        <span>Introduccion al editor</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Conceptos Basicos</a>
+            <a class="gd-button disabled">Elegir una cancion</a>
+            <a class="gd-button disabled">Menu de pausa</a>
+            <a class="gd-button disabled">Publicar tu nivel</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Objetos</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Objetos del gameplay</a>
+            <a class="gd-button disabled">Objetos animados</a>
+            <a class="gd-button disabled">Objetos personalizados</a>
+            <a class="gd-button disabled">Items</a>
+            <a class="gd-button disabled">Triggers</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Sistemas del editor</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Canales</a>
+            <a class="gd-button disabled">Keyframes</a>
+            <a class="gd-button disabled">Auto-Build</a>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>
