@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }).observe(document.getElementById('credits'), { attributes: true });
 
     document.addEventListener('keydown', function (event) {
-        if (!window.getComputedStyle(document.querySelector('.popup')).display !== 'none') {
+        if (!window.getComputedStyle(document.getElementById('credits')).display !== 'none') {
             if (event.key === 'ArrowLeft' && creditsIndex > 0) {
                 switchCreditsPage('left');
             } else if (event.key === 'ArrowRight' && creditsIndex < creditsPages.length - 1) {

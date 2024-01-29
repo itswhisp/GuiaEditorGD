@@ -76,6 +76,13 @@ a.gold:active {
     }
 }
 
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
 /* --------------------------------- Clases --------------------------------- */
 
 .disabled {
@@ -118,8 +125,8 @@ a.gold:active {
 
 .tippy-box[data-theme~='gdTippy'] {
     padding: 0 10px;
-    font-size: 23px;
-    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .tippy-box[data-theme~='gdTippy'] .tippy-content {
@@ -128,7 +135,7 @@ a.gold:active {
 
 /* -------------------------------- Dialogos -------------------------------- */
 
-.popup {
+.overlay {
     top: 0;
     left: 0;
     right: 0;

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="popup" id="credits">
+    <div class="overlay" id="credits">
         <div class="dialog">
             <img class="arrow left hidden" src="/assets/img/left.png">
             <img class="close" src="/assets/img/close.png"
@@ -35,13 +35,15 @@
                         <img class="icon" style="height: 60px; padding: 10px 0;" src="/assets/img/credits/colon.png">
                         <a href="https://twitter.com/TheRealGDColon" target="_blank" class="gold">Colon</a>
                         <span class="small">Parte del codigo de la interfaz</span>
-                        <a href="https://gdbrowser.com/" class="smaller">(GD Browser)</a>
+                        <a href="https://gdbrowser.com/" target="_blank" class="smaller">(GD Browser)</a>
                     </div>
                 </div>
             </div>
             <img class="arrow right" src="/assets/img/right.png">
         </div>
     </div>
+    <a href="https://github.com/ItsWhisp/GuiaEditorGD" target="_blank" class="github"><img
+            src="/assets/img/github.png"></a>
     <img class="logo" src="/assets/img/logo.png">
     <span>Guia del editor</span>
     <span class="gold small">(En Construccion)</span>
@@ -51,14 +53,15 @@
         <a data-tippy-content="Guia oficial del editor (En Ingles)"
             href="https://www.robtopgames.com/files/GDEditor.pdf" target="_blank" class="menu-button"><img
                 src="/assets/img/buttons/guia-oficial.png"></a>
-        <a data-tippy-content="Creditos y agradecimientos especiales" href="#"
+        <a data-tippy-content="Creditos y agradecimientos especiales" href="#creditos"
             onclick="document.getElementById('credits').style.display = 'flex'" class="menu-button"><img
                 src="/assets/img/buttons/creditos.png"></a>
     </div>
+    <!-- TODO: Agregar iconos a las guias de los triggers -->
     <div class="section">
         <span>Introduccion al editor</span>
         <div class="section-links">
-            <a class="gd-button disabled">Conceptos Basicos</a>
+            <a class="gd-button disabled">Conceptos basicos</a>
             <a class="gd-button disabled">Elegir una cancion</a>
             <a class="gd-button disabled">Menu de pausa</a>
             <a class="gd-button disabled">Publicar tu nivel</a>
@@ -71,7 +74,140 @@
             <a class="gd-button disabled">Objetos animados</a>
             <a class="gd-button disabled">Objetos personalizados</a>
             <a class="gd-button disabled">Items</a>
-            <a class="gd-button disabled">Triggers</a>
+            <a class="gd-button disabled">Editar Grupos</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Triggers: Basicos</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Introduccion</a>
+            <a class="gd-button disabled">Start Pos</a>
+            <a class="gd-button disabled">Move</a>
+            <a class="gd-button disabled">Stop</a>
+            <a class="gd-button disabled">Toggle</a>
+            <a class="gd-button disabled">Spawn</a>
+            <a class="gd-button disabled">Rotate</a>
+            <a class="gd-button disabled">Scale</a>
+            <a class="gd-button disabled">Touch</a>
+            <a class="gd-button disabled">On Death</a>
+            <a class="gd-button disabled">Options</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Triggers: Visuales</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Color</a>
+            <a class="gd-button disabled">Pulse</a>
+            <a class="gd-button disabled">Alpha</a>
+            <a class="gd-button disabled">Shake</a>
+            <a class="gd-button disabled">Animate</a>
+            <a class="gd-button disabled">Keyframe Animation</a>
+            <a class="gd-button disabled">Keyframe</a>
+            <a class="gd-button disabled">Area Triggers</a>
+            <a class="gd-button disabled">Edit Area Triggers</a>
+            <a class="gd-button disabled">Area Stop</a>
+            <a class="gd-button disabled">Change BG/G/MG</a>
+            <a class="gd-button disabled">Spawn Particles</a>
+            <a class="gd-button disabled">Setup MG</a>
+            <a class="gd-button disabled">BG/MG Speed</a>
+            <a class="gd-button disabled">Activar/Desactivar Estela</a>
+            <a class="gd-button disabled">Show/Hide</a>
+            <a class="gd-button disabled">BG Effect On/Off</a>
+            <a class="gd-button disabled">Gradient</a>
+            <a class="gd-button disabled">Enter Effects</a>
+            <a class="gd-button disabled">Move/Rotate/Scale/Fade/Tint Enter</a>
+            <a class="gd-button disabled">Stop Enter</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Triggers: Camara</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Zoom</a>
+            <a class="gd-button disabled">Static Camera</a>
+            <a class="gd-button disabled">Camera Offset</a>
+            <a class="gd-button disabled">Gameplay Offset</a>
+            <a class="gd-button disabled">Camera Rotation</a>
+            <a class="gd-button disabled">Camera Edge</a>
+            <a class="gd-button disabled">Camera Guide</a>
+            <a class="gd-button disabled">Camera Mode</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Triggers: Audio</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Song</a>
+            <a class="gd-button disabled">Edit Song</a>
+            <a class="gd-button disabled">SFX</a>
+            <a class="gd-button disabled">Edit SFX</a>
+            <a class="gd-button disabled">BPM Guide</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Triggers: Shaders</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Shader</a>
+            <a class="gd-button disabled">ShockWave</a>
+            <a class="gd-button disabled">Shock Line</a>
+            <a class="gd-button disabled">Glitch</a>
+            <a class="gd-button disabled">Chromatic</a>
+            <a class="gd-button disabled">Chromatic Glitch</a>
+            <a class="gd-button disabled">Pixelate</a>
+            <a class="gd-button disabled">Lens Circle</a>
+            <a class="gd-button disabled">Radial Blur</a>
+            <a class="gd-button disabled">Motion Blur</a>
+            <a class="gd-button disabled">Bulge</a>
+            <a class="gd-button disabled">Pinch</a>
+            <a class="gd-button disabled">Gray Scale</a>
+            <a class="gd-button disabled">Sepia</a>
+            <a class="gd-button disabled">Invert Color</a>
+            <a class="gd-button disabled">Hue</a>
+            <a class="gd-button disabled">Edit Color</a>
+            <a class="gd-button disabled">Split Screen</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Triggers: Gameplay</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Reverse</a>
+            <a class="gd-button disabled">Rotate Gameplay</a>
+            <a class="gd-button disabled">TimeWarp</a>
+            <a class="gd-button disabled">End</a>
+            <a class="gd-button disabled">Player Control</a>
+            <a class="gd-button disabled">Gravity</a>
+            <a class="gd-button disabled">Teleport</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Triggers: Items</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Count</a>
+            <a class="gd-button disabled">Instant Count</a>
+            <a class="gd-button disabled">Pickup</a>
+            <a class="gd-button disabled">Time</a>
+            <a class="gd-button disabled">Time Event</a>
+            <a class="gd-button disabled">Time Control</a>
+            <a class="gd-button disabled">Item Edit</a>
+            <a class="gd-button disabled">Item Compare</a>
+            <a class="gd-button disabled">Persistent Item</a>
+        </div>
+    </div>
+    <div class="section">
+        <span>Triggers: Sin Organizar</span>
+        <div class="section-links">
+            <a class="gd-button disabled">Random</a>
+            <a class="gd-button disabled">Advanced Random</a>
+            <a class="gd-button disabled">Sequence</a>
+            <a class="gd-button disabled">Reset</a>
+            <a class="gd-button disabled">Event</a>
+            <a class="gd-button disabled">Counter Label</a>
+            <a class="gd-button disabled">UI Settings</a>
+            <a class="gd-button disabled">Visibility Link</a>
+            <a class="gd-button disabled">Collision</a>
+            <a class="gd-button disabled">Instant Collision</a>
+            <a class="gd-button disabled">Collision State</a>
+            <a class="gd-button disabled">Collision Block</a>
+            <a class="gd-button disabled">Player Touch</a>
+
         </div>
     </div>
     <div class="section">

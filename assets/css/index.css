@@ -9,6 +9,23 @@ body {
 
 /* --------------------------- Contenido Principal -------------------------- */
 
+.github {
+    right: 2%;
+    bottom: 2%;
+    position: fixed;
+}
+
+.github img {
+    width: 80px;
+    height: auto;
+}
+
+.github:active {
+    z-index: 10;
+    transform: scale(1.15);
+    animation: bounce 0.25s ease-in-out forwards;
+}
+
 .logo {
     width: 700px;
     max-width: 80%;

@@ -1,0 +1,8 @@
+/* ---------------------------- Pantalla de carga --------------------------- */
+
+#loading img {
+    width: 90px;
+    height: auto;
+    mix-blend-mode: luminosity;
+    animation: spin 1s linear infinite;
+}

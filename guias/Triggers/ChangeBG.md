@@ -1,0 +1,2 @@
+# Change BG/G/MG
+These Triggers change the Background, Ground or Middleground respectively. Pick a Background, Ground, or Middleground from the menu to switch to the respective one from this Trigger's activation.
