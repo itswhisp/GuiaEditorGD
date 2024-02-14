@@ -23,14 +23,14 @@ body {
     -webkit-text-stroke-width: 0.24vh;
     -webkit-text-stroke-color: black;
     -webkit-tap-highlight-color: transparent;
-    font-family: 'Pusab', Arial, Helvetica, sans-serif;
+    font-family: 'Pusab', Arial, Aller, sans-serif;
     text-shadow: 0.375vh 0.375vh 0vh rgba(0, 0, 0, 0.3);
 
-    @media (orientation: portrait) {
+    @media (max-width: 700px) {
         -webkit-text-stroke-width: 0.3vw;
     }
 
-    @media (orientation: portrait) {
+    @media (max-width: 700px) {
         text-shadow: 0.22vh 0.22vh 0vh rgba(0, 0, 0, 0.3);
     }
 }
@@ -56,6 +56,14 @@ a.gold:active {
     animation: bounce 0.25s ease-in-out forwards;
 }
 
+p {
+    font-size: 0.75rem;
+    text-shadow: none;
+    word-break: break-word;
+    -webkit-text-stroke-width: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
 /* ------------------------------- Animaciones ------------------------------ */
 
 @keyframes bounce {
@@ -76,6 +84,20 @@ a.gold:active {
     }
 }
 
+@keyframes dialogBounce {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.075);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 @keyframes spin {
     100% {
         -webkit-transform: rotate(360deg);
@@ -84,6 +106,80 @@ a.gold:active {
 }
 
 /* --------------------------------- Clases --------------------------------- */
+
+.overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 10000;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.gd-button {
+    color: #fff;
+    padding: 8px 12px;
+    position: relative;
+    text-decoration: none;
+    background-size: 100% 100%;
+    background-position: center;
+    transition: all 0.07s ease-in-out;
+    background-image: url('/assets/img/btn2.png');
+}
+
+@media (max-width: 700px) {
+    .gd-button {
+        overflow: clip;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow-clip-margin: 100px;
+    }
+}
+
+.gd-button img {
+    height: 0.89em;
+    transform: translateY(1px);
+}
+
+.gd-button::before,
+.gd-button::after {
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.gd-button::before {
+    left: -24px;
+    background-position: left center;
+    background-image: url('/assets/img/btn1.png');
+}
+
+.gd-button::after {
+    right: -23px;
+    background-position: right center;
+    background-image: url('/assets/img/btn3.png');
+}
+
+.gd-button:active {
+    z-index: 10;
+    transform: scale(1.15);
+    animation: bounce 0.25s ease-in-out forwards;
+}
+
+.unselectable {
+    user-select: none;
+}
 
 .disabled {
     user-select: none;
@@ -107,7 +203,7 @@ a.gold:active {
     font-size: 0.8em;
     -webkit-text-stroke-width: 0.2vh;
 
-    @media (orientation: portrait) {
+    @media (max-width: 700px) {
         -webkit-text-stroke-width: 0.24vw;
     }
 }
@@ -116,7 +212,7 @@ a.gold:active {
     font-size: 0.6em;
     -webkit-text-stroke-width: 0.15vh;
 
-    @media (orientation: portrait) {
+    @media (max-width: 700px) {
         -webkit-text-stroke-width: 0.24vw;
     }
 }
@@ -124,31 +220,18 @@ a.gold:active {
 /* -------------------------------- Tippy.js -------------------------------- */
 
 .tippy-box[data-theme~='gdTippy'] {
-    padding: 0 10px;
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    user-select: none;
+    padding: 2px 14px;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .tippy-box[data-theme~='gdTippy'] .tippy-content {
-    -webkit-text-stroke-width: 0.28vh;
+    -webkit-text-stroke-width: 0;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* -------------------------------- Dialogos -------------------------------- */
-
-.overlay {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    z-index: 10000;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
-}
 
 .dialog {
     display: flex;
@@ -164,4 +247,42 @@ a.gold:active {
     flex-direction: column;
     background-color: #995533;
     border-image: url(/assets/img/dialogbox.png) 10% round;
+}
+
+.dialogalt {
+    gap: 14px;
+    display: flex;
+    max-width: 90%;
+    max-height: 80%;
+    padding: 1vh 3vh;
+    border-radius: 3vh;
+    border-width: 3.5vh;
+    border-style: solid;
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: #001931;
+    animation: dialogBounce 0.4s;
+    border-image: url(/assets/img/dialogalt.png) 10% stretch;
+    border-image-slice: 65;
+}
+
+@media (max-width: 700px) {
+    .dialogalt {
+        border-width: 4vw;
+    }
+}
+
+.dialogalt .gold {
+    font-size: 1.2em;
+}
+
+.dialog-button {
+    height: 1.7rem;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.dialog-button:active {
+    animation: bounce 0.25s ease-in-out forwards;
 }

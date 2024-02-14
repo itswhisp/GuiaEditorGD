@@ -38,16 +38,19 @@ document.addEventListener("DOMContentLoaded", function () {
         switchCreditsPage('right');
     });
 
+    // Desactiva el scroll de la página si los créditos son visibles
     new MutationObserver(function (mutationsList) {
         mutationsList.forEach(function (mutation) {
-            if (mutation.attributeName === 'style') {
-                var popupDisplay = window.getComputedStyle(document.getElementById('credits')).display;
-                document.body.style.overflowY = (popupDisplay === 'flex') ? 'hidden' : 'initial';
-                document.documentElement.style.overflowY = (popupDisplay === 'flex') ? 'hidden' : 'initial';
+            if (mutation.attributeName === 'class') {
+                var creditsElement = document.getElementById('credits');
+                var isHidden = creditsElement.classList.contains('hidden');
+                document.body.style.overflowY = isHidden ? 'initial' : 'hidden';
+                document.documentElement.style.overflowY = isHidden ? 'initial' : 'hidden';
             }
         });
-    }).observe(document.getElementById('credits'), { attributes: true });
+    }).observe(document.getElementById('credits'), { attributes: true, attributeFilter: ['class'] });
 
+    // Permite controlar el dialogo de los creditos con el teclado
     document.addEventListener('keydown', function (event) {
         if (!window.getComputedStyle(document.getElementById('credits')).display !== 'none') {
             if (event.key === 'ArrowLeft' && creditsIndex > 0) {
@@ -55,16 +58,15 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (event.key === 'ArrowRight' && creditsIndex < creditsPages.length - 1) {
                 switchCreditsPage('right');
             } else if (event.key === 'Escape') {
-                document.getElementById('credits').style.display = 'none';
+                document.getElementById('credits').classList.add('hidden');
             }
         }
     });
 
-    /* --------------------------- Tippy.js (Tooltips) -------------------------- */
     tippy('[data-tippy-content]', {
         touch: false,
         arrow: false,
-        offset: [0, 15],
+        offset: [0, 20],
         theme: 'gdTippy',
         maxWidth: 'none',
         followCursor: true,
