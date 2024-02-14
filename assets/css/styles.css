@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Pusab';
-    src: url(/assets/fonts/pusab.woff);
+    src: url(../fonts/pusab.woff);
 }
 
 /* ---------------------------------- Fondo --------------------------------- */
@@ -130,7 +130,7 @@ p {
     background-size: 100% 100%;
     background-position: center;
     transition: all 0.07s ease-in-out;
-    background-image: url('/assets/img/btn2.png');
+    background-image: url('../img/btn2.png');
 }
 
 @media (max-width: 700px) {
@@ -162,13 +162,13 @@ p {
 .gd-button::before {
     left: -24px;
     background-position: left center;
-    background-image: url('/assets/img/btn1.png');
+    background-image: url('../img/btn1.png');
 }
 
 .gd-button::after {
     right: -23px;
     background-position: right center;
-    background-image: url('/assets/img/btn3.png');
+    background-image: url('../img/btn3.png');
 }
 
 .gd-button:active {
@@ -246,7 +246,7 @@ p {
     box-sizing: border-box;
     flex-direction: column;
     background-color: #995533;
-    border-image: url(/assets/img/dialogbox.png) 10% round;
+    border-image: url(../img/dialogbox.png) 10% round;
 }
 
 .dialogalt {
@@ -263,7 +263,7 @@ p {
     flex-direction: column;
     background-color: #001931;
     animation: dialogBounce 0.4s;
-    border-image: url(/assets/img/dialogalt.png) 10% stretch;
+    border-image: url(../img/dialogalt.png) 10% stretch;
     border-image-slice: 65;
 }
 
