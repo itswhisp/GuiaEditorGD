@@ -1,4 +1,4 @@
-# Start Pos
+## Start Pos
 This Trigger is used to set a custom starting location of the player for playtesting. Levels cannot be verified if they include a Start Pos Trigger.
 
 The "Speed" and "Mode" options are used to set the Speed and Game Mode to use from the Trigger. The "Options" menu features more settings, such as starting in Mini Mode, Dual Mode, or Rotated Gameplay.

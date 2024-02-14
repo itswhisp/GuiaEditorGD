@@ -1,4 +1,4 @@
-# Touch
+## Touch
 Touch Triggers are used to enable or disable a Group ID upon player touch. Touch Triggers also function as Spawn Triggers, meaning that they can spawn other Triggers. By default, the Touch Triggers switch between disabling and enabling an object on player touch. It is worth noting, that moving left and right also count as a player touch in Platformer, despite the player not jumping.
 
 - **Group ID:** The Group ID you want to enable, disable, or spawn.

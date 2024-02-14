@@ -1,4 +1,4 @@
-# Edit Advanced Follow
+## Edit Advanced Follow
 This Trigger is used to edit the attributes of an Advanced Follow Trigger. An explanation of all options can be found below.
 
 - **Target GID:** The Group ID of the objects that should go towards the "Follow GID".

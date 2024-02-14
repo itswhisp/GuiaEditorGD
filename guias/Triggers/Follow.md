@@ -1,4 +1,4 @@
-# Follow
+## Follow
 This Trigger is used to make objects mimic the movement of other objects. All options are explained below.
 
 - **Target Group ID:** The objects you want to follow another Group ID.

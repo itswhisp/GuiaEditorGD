@@ -1,2 +1,2 @@
-# Edit Area Move/Rotate/Scale/Fade/Tint
+## Edit Area Move/Rotate/Scale/Fade/Tint
 Edit Area Triggers change the values of Area Triggers. Due to all options being the same, you can check the section above to find detailed information about all settings. Edit Area Triggers have the option to use Effect IDs to reference Area Triggers. The Effect ID can be configured within the Area Triggers

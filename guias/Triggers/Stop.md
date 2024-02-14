@@ -1,4 +1,4 @@
-# Stop
+## Stop
 
 This Trigger shows as a Stop, Pause or Resume Trigger depending on what option you choose inside "Edit Object"
 

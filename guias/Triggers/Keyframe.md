@@ -1,10 +1,10 @@
-# Keyframe
+## Keyframe
 This Trigger is used to set up keyframes. You can find an explanation of all settings below, as well as an in-depth example in the Keyframe System chapter.
 
 The Keyframe Trigger is one of the most complex Triggers. We suggest following along with your own example when testing the options.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/85.png)
-*Figure 7.19: Keyframe Trigger.*
+*Figure 7.19: Keyframe Trigger.*<br>
 
 - **GroupID:** The objects you want to reference for your animation. Note that these are not necessarily the objects that will do the animation. Those objects are normally set in the Keyframe Animation Trigger. "GroupID" in this Trigger is mainly used for referencing the art when you enable "Preview Art". However, it is also used as the target if you do not input any override when calling the Keyframe Animation Trigger.
 - **Duration:** The duration until the Keyframe Trigger reaches the next one. This time is always used unless it is a "Ref Only" Keyframe. "Time", "Even" and "Dist" set how the time is used.
@@ -22,7 +22,7 @@ The Keyframe Trigger is one of the most complex Triggers. We suggest following a
 Let us look at an example to better understand how the different options work.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/86.png)
-*Figure 7.20: Example of how keyframes work.*
+*Figure 7.20: Example of how keyframes work.*<br>
 
 The red Keyframe Triggers are marked as "Ref Only", while the green and blue ones are not. The green keyframe controls the animation until the blue one, and the blue one controls it until the end. If you set easing on the green keyframe, that easing will be used to reach the blue keyframe. All red easing values are ignored since they are reference points only.
 
@@ -34,7 +34,7 @@ If you instead select "Even" on the green keyframe, it will ignore all the durat
 - **Preview Art:** Used to preview the art you want to animate. By default, you only see the arrow icon. For this option to work, you have to put a Group ID and also declare a Group Parent ID. With this option enabled, the objects will spawn at the arrow position, with the Group Parent ID functioning like the arrow icon.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/87.png)
-*Figure 7.21: "Preview Art" on and off respectively.*
+*Figure 7.21: "Preview Art" on and off respectively.*<br>
 
 - **Ref Only:** Reference objects. Objects marked as reference have a lower opacity and are not considered for the "Even" and "Dist" options. Check the corresponding options to see how their movement is handled.
 - **Auto Layer:** Automatically layers the keyframes, so that the new one is the highest. Most useful when using "Preview Art".

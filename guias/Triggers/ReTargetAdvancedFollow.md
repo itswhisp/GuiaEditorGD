@@ -1,4 +1,4 @@
-# Re-Target Advanced Follow
+## Re-Target Advanced Follow
 This Trigger is used to change the target of an Advanced Follow Trigger.
 
 - **Target GID:** The Group ID of the objects that should go towards the Group ID set in "Follow GID".

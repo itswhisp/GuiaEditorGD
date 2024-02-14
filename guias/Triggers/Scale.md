@@ -1,4 +1,4 @@
-# Scale
+## Scale
 This Trigger is used to scale a specific Group ID. Its interface is seen below. After that, each option is described.
 
 - **Target Group ID:** The objects you want to scale.
@@ -13,6 +13,6 @@ If you want to scale an object and have it return to its original size, you can 
 - **Relative Rotation:** When blocks are rotated, they will rotate their X-axis and Y-axis as well. Turning this option on draws a new X-axis and Y-axis and puts it at the correct place. In the example below, the blocks are rotated 45 degrees.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/79.png)
-*Figure 7.13: Comparision of "Relative Rotation" on and off respectively.*
+*Figure 7.13: Comparision of "Relative Rotation" on and off respectively.*<br>
 
 - **Relative Scale:** This option makes the scale value adjust based on a reference object. Normally, if you scale an object down by 0.95 for example, each scale will be smaller and smaller. With this option enabled, the scale will instead refer to the object in the Center Group ID to decide what the next scale factor should be.

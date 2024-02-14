@@ -1,4 +1,4 @@
-# Instant Count
+## Instant Count
 Instant Count Triggers are used to are used to enable, disable, or spawn a Group ID if an Item ID is equal, smaller, or larger than a specific number. Instant Count Triggers only check if the condition is met when they are hit and never again afterwards, as opposed to Count Triggers which check for their condition constantly.
 
 - **Item ID:** The Item ID you want to check the value for. Place the "0" object and click "Edit Special" to configure a unique Item ID.

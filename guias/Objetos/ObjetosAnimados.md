@@ -1,22 +1,22 @@
-# Objetos Animados
+## Objetos Animados
 
 ### Description
 Animated Objects are in the seventh tab. Each object here consists of several frames, which the game cycles through and loops forever to create animations. The most complex Animated Objects are particles, which can be customized in the Particle Editor. Many Collectable Objects are animated as well and have similar settings. The first page of the tab is seen here:
 
 ![](https://guia.jorge603.xyz/assets/img/figures/45.png)
-*Figure 4.1: The Animated Objects tab.*
+*Figure 4.1: The Animated Objects tab.*<br>
 
 ### Monsters
 As seen above, the first 5 objects in the tab are various Monsters. Once placed, these do different default animations. However, they can be customized using the Animate Trigger covered later. To use the Animate Trigger on a Monster, you have to assign it a Group ID. Select the Monster you want to change the animation of and click the "Edit Group" button found on the right. In this menu, enter a value in the "Add Group ID" field. "Next Free" is helpful to find an unused Group ID. To assign that value, click the "Add" button, as seen in figure 4.2. You can use the same Group ID for different kinds of Monsters. However, their animation cycles may not align with each other, resulting in unwanted results. Because of this it is recommended to use a different Group ID for every kind of monster. You can find more information about Groups and Triggers in the later chapters.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/46.png)
-*Figure 4.2: "Edit Group" menu with a Group ID assigned.*
+*Figure 4.2: "Edit Group" menu with a Group ID assigned.*<br>
 
 ### Edit Special
 The objects beyond the Monsters do not let you change to another animation specifically, but you can use "Edit Special" to customize its default animation in some ways. To do so, select the objects you want to edit and click the "Edit Special" button found to the right. The menu will look like this:
 
 ![](https://guia.jorge603.xyz/assets/img/figures/47.png)
-*Figure 4.3: Default animation settings.*
+*Figure 4.3: Default animation settings.*<br>
 
 All options change different attributes of the animation cycle. Here is a list of all options and what they do:
 
@@ -32,19 +32,19 @@ All options change different attributes of the animation cycle. Here is a list o
 The Particle Editor allows you to create your own set of particles. To get started, you first have to place its object. It is the first object in the tab, seen as a white "P" and shown in figure 4.4
 
 ![](https://guia.jorge603.xyz/assets/img/figures/48.png)
-*Figure 4.4: Particle Editor object.*
+*Figure 4.4: Particle Editor object.*<br>
 
 While having this object placed and select, you can access the Particle Editor by clicking the "Edit Special" button on the right. This opens the menu in figure 4.5. In here, you can configure different attributes of your particles, such as their movement, color, texture, and more.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/49.png)
-*Figure 4.5: The Particle Editor with default settings.*
+*Figure 4.5: The Particle Editor with default settings.*<br>
 
 In the following sections we will go through all the tabs and explain what every option does. You can copy and paste configurations from different particles by using the "C" and "P" buttons at the top
 
 First, we have the "Motion" tab, which configures the particles' movement. You can edit the motion of your particles in "Gravity" or "Radius" mode. Depending on what mode you choose, you will have different options available.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/50.png)
-*Figure 4.6: The options in the "Motion" tab.*
+*Figure 4.6: The options in the "Motion" tab.*<br>
 
 - **Max Particles:** The amount of particles that can be visible at once.
 - **Duration:** How long particles will be generated. "-1.00" means they will spawn forever, which you can input by clicking the "Inf." button to the right.
@@ -64,7 +64,7 @@ spawn.
 Next is the "Visual" tab, which lets you change how the particles look. The start and end colors are customized in the top left.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/51.png)
-*Figure 4.7: The options in the "Visual" tab.*
+*Figure 4.7: The options in the "Visual" tab.*<br>
 
 - **StartSize:** The size the particles have when they spawn.
 - **EndSize:** The size the particles have when they despawn.
@@ -78,7 +78,7 @@ Next is the "Visual" tab, which lets you change how the particles look. The star
 In the "Extra" tab, seen below, various other configuration can be done
 
 ![](https://guia.jorge603.xyz/assets/img/figures/52.png)
-*Figure 4.8: The options in the "Extra" tab.*
+*Figure 4.8: The options in the "Extra" tab.*<br>
 
 - **Free:** With this option enabled, you do not move the particles but pan the camera around.
 - **Relative:** With this option, particles do not move when you move the object but spawn at the new position.
@@ -106,12 +106,12 @@ In the "Extra" tab, seen below, various other configuration can be done
 In the "Texture" tab, the actual texture of your particle is chosen. Note that for textures with a Base Color other than white, such as the Difficulty Faces, the particle color has to be white. Choosing a color other than white will tint the colors, which may lead to unwanted results. Based on prior settings, the particles may even disappear if you choose black for the particle color
 
 ![](https://guia.jorge603.xyz/assets/img/figures/53.png)
-*Figure 4.9: The options in the "Texture" tab.*
+*Figure 4.9: The options in the "Texture" tab.*<br>
 
 The Particle Editor preview is on the left half of the settings menu. In this editor, you can configure motion options by dragging lines around and positioning the particles at different locations. The default version of the editor looks like figure 4.10, but it will automatically update the motion, color, and texture depending on prior configurations.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/54.png)
-*Figure 4.10: The motion editor.*
+*Figure 4.10: The motion editor.*<br>
 
 All buttons allow you to modify different parts of the motion. Choose the mode by clicking on the corresponding button. If no button is enabled, you can move the particles inside the editor. Their movement depends on the "Free", "Relative", and "Grouped" options from the "Extra" tab.
 
@@ -124,4 +124,4 @@ The third button, "3", edits the "Angle" value in both modes, as well as the "Sp
 The "C" button recenters the particles if you moved them around, and the last, colored button changes the background color of the editor.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/55.png)
-*Figure 4.11: Using button 1, 2 and 3 to change motion settings in "Gravity" mode.*
+*Figure 4.11: Using button 1, 2 and 3 to change motion settings in "Gravity" mode.*<br>

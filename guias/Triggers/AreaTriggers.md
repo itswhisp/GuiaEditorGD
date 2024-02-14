@@ -1,4 +1,4 @@
-# Area Move/Rotate/Scale/Fade/Tint
+## Area Move/Rotate/Scale/Fade/Tint
 Area Triggers are used to apply different effects to an area of objects. Due to many Area Triggers having the same settings, we will be explaining their general options first and provide specific ones below. Note that Area Triggers are on the more complicated side. Follow along with your own example.
 
 Area Triggers work by taking the center you provide, drawing a circle around the center (or a specific direction depending on what you pick below the "Deadzone" option). This is done using the length you provide and calculating the steps in between. For example, if you have "From Opacity" at 1.00 and "To Opacity" at 0.50, the center will be shown as 1.00 opacity, and the borders will be at 0.50 opacity. All other steps in between will be calculated gradually. For example, right in the middle ("Length"/2), the opacity will be (1.00 + 0.50)/2 = 0.75.
@@ -9,7 +9,7 @@ Area Triggers work by taking the center you provide, drawing a circle around the
 - **Deadzone:** Divides the length by the value you set here and changes the transition between center and edge accordingly. For example, having a length of 40 and setting a "Deadzone" of 0.5 would do 0 to 100% between 0 and 20, and stay 100% from 20-40.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/88.png)
-*Figure 7.22: Example of how the "Deadzone" works.*
+*Figure 7.22: Example of how the "Deadzone" works.*<br>
 
 - **ModFront/ModBack:** Modify the front and back of your center position. The value you put here is multiplied with your center.
 - **Ignore Linked:** Objects linked together will be seen as one object by default. Enabling this object disables this and makes the objects behave as if they are not linked. Note that you have to set an object as Group Parent or Area Trigger for this to work.
@@ -21,7 +21,7 @@ Area Triggers work by taking the center you provide, drawing a circle around the
 - **Effect ID:** Specific ID that can be referenced later, for example in Edit Area Triggers.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/89.png)
-*Figure 7.23: Settings of Area Triggers.*
+*Figure 7.23: Settings of Area Triggers.*<br>
 
 - **P1:** Player 1.
 - **P2:** Player 2.
@@ -36,11 +36,11 @@ Area Triggers work by taking the center you provide, drawing a circle around the
 - **TR:** Top right of the screen.
 
 ![](https://guia.jorge603.xyz/assets/img/figures/90.png)
-*Figure 7.24: Overview of center options.*
+*Figure 7.24: Overview of center options.*<br>
 
 The buttons below the "Deadzone" option indicate what direction the length will be drawn. Here’s a table of all the variations and what their range looks like.
 
-*Table 7.1: Direction settings.*
+*Table 7.1: Direction settings.*<br>
 
 | ![](https://guia.jorge603.xyz/assets/img/figures/91.png) | ![](https://guia.jorge603.xyz/assets/img/figures/92.png) |
 | -------------------------------------------------------- | -------------------------------------------------------- |

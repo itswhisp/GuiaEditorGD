@@ -1,4 +1,4 @@
-# Follow Player Y
+## Follow Player Y
 Follow Player Y Triggers are used to make objects follow the Y movement of the player. The movement can be modified by using the different options explained below
 
 - **Target Group ID:** The objects you want to follow the player's Y movement.

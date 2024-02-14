@@ -1,4 +1,4 @@
-# Color
+## Color
 Color Triggers are used to change the settings of a Color Channel. It works the same way as the normal color selection, which was covered in the Select Color section.
 
 The "Color ID" field refers to what Color Channel you want to edit. You can click the "+" button for more options, such as the Background Color.

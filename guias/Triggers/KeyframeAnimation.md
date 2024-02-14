@@ -1,4 +1,4 @@
-# Keyframe Animation
+## Keyframe Animation
 This Trigger is used to activate a keyframe animation. You can find all settings below, as well as a detailed example of its usage in the Keyframe System chapter.
 
 - **Animation Group ID:** Group ID of your Keyframe Triggers. It is enough for the first Keyframe Trigger in your animation to have this Group ID.

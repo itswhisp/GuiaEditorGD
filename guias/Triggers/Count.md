@@ -1,4 +1,4 @@
-# Count
+## Count
 Count Triggers are used to enable, disable, or spawn a Group ID when an Item ID reaches a specific number. Count IDs can be activated at any time when that number is reached, as opposed to Instant Count Triggers which only check if the condition is met when the Trigger is hit.
 
 - **Item ID:** The Item ID you want to check the value for. Place the "0" object and click "Edit Special" to configure a unique Item ID.

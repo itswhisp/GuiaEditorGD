@@ -1,4 +1,4 @@
-# Alpha
+## Alpha
 This Trigger is used to change the opacity of an object over a given time
 frame. The options are as follows:
 

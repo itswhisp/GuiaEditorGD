@@ -1,4 +1,4 @@
-# Pickup
+## Pickup
 Pickup Triggers can be used to change the values of Item IDs.
 - **Item ID:** The Item ID you want to check the value for. Place the "0" object and click "Edit Special" to configure a unique Item ID.
 - **Count:** The number you want to increase the current Item ID value by. By default, this will use addition. Check the options below for different arithmetics.

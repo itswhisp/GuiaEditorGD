@@ -1,4 +1,4 @@
-# Shake
+## Shake
 The Shake Trigger applies a temporary shake effect to the screen. Be careful to not overuse this Trigger or input large numbers into the options, as it may result in a bad experience for players. The options are explained below.
 
 - **Strength:** How intense the shake effect is.
