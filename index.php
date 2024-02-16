@@ -101,7 +101,7 @@ $categories = $conn->query("SELECT * FROM categorias");
                 <img src="<?= $section["imagen_uri"] ?>">
                 <?= $section["titulo"] ?>
             </a>
-        <?php elseif ($section["has_multiple_img"] == 1): ?>
+        <?php elseif ($section["has_multiple_img"] == 1): ?> 
             <a class="gd-button" href="pagina.html#<?= $section["nombre_seccion"] ?>">
                 <?php 
                 $imgs = $conn->query("SELECT * FROM imagenes WHERE id_seccion = {$section['id_seccion']}");
