@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-02-2024 a las 07:28:33
+-- Tiempo de generación: 19-02-2024 a las 08:28:38
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categorias` (
   `id_categoria` int(12) NOT NULL,
-  `fecha` date NOT NULL DEFAULT current_timestamp(),
   `titulo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -37,19 +36,19 @@ CREATE TABLE `categorias` (
 -- Volcado de datos para la tabla `categorias`
 --
 
-INSERT INTO `categorias` (`id_categoria`, `fecha`, `titulo`) VALUES
-(1, '2024-02-14', 'Introduccion al editor'),
-(2, '2024-02-14', 'Objetos'),
-(3, '2024-02-14', 'Triggers: Basicos'),
-(4, '2024-02-14', 'Triggers: Visuales'),
-(5, '2024-02-14', 'Triggers: Camara'),
-(6, '2024-02-14', 'Triggers: Audio'),
-(7, '2024-02-14', 'Triggers: Shaders'),
-(8, '2024-02-15', 'Triggers: Gameplay'),
-(9, '2024-02-15', 'Triggers: Items'),
-(10, '2024-02-15', 'Triggers: Colisiones'),
-(11, '2024-02-15', 'Triggers: Sin organizar'),
-(12, '2024-02-15', 'Sistemas del editor');
+INSERT INTO `categorias` (`id_categoria`, `titulo`) VALUES
+(1, 'Introduccion al editor'),
+(2, 'Objetos'),
+(3, 'Triggers: Basicos'),
+(4, 'Triggers: Visuales'),
+(5, 'Triggers: Camara'),
+(6, 'Triggers: Audio'),
+(7, 'Triggers: Shaders'),
+(8, 'Triggers: Gameplay'),
+(9, 'Triggers: Items'),
+(10, 'Triggers: Colisiones'),
+(11, 'Triggers: Sin Organizar'),
+(12, 'Sistemas del editor');
 
 -- --------------------------------------------------------
 
@@ -59,7 +58,6 @@ INSERT INTO `categorias` (`id_categoria`, `fecha`, `titulo`) VALUES
 
 CREATE TABLE `imagenes` (
   `id_imagen` int(11) NOT NULL,
-  `fecha` date NOT NULL DEFAULT current_timestamp(),
   `uri_img` varchar(200) NOT NULL,
   `id_seccion` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -68,34 +66,34 @@ CREATE TABLE `imagenes` (
 -- Volcado de datos para la tabla `imagenes`
 --
 
-INSERT INTO `imagenes` (`id_imagen`, `fecha`, `uri_img`, `id_seccion`) VALUES
-(4, '2024-02-14', 'assets/img/triggers/AreaFade.png', 42),
-(5, '2024-02-14', 'assets/img/triggers/AreaMove.png', 42),
-(6, '2024-02-14', 'assets/img/triggers/AreaRotate.png', 42),
-(7, '2024-02-14', 'assets/img/triggers/AreaScale.png', 42),
-(8, '2024-02-14', 'assets/img/triggers/AreaStop.png', 42),
-(9, '2024-02-14', 'assets/img/triggers/AreaTint.png', 42),
-(10, '2024-02-14', 'assets/img/triggers/EditAreaFade.png', 44),
-(11, '2024-02-14', 'assets/img/triggers/EditAreaMove.png', 44),
-(12, '2024-02-14', 'assets/img/triggers/EditAreaRotate.png', 44),
-(13, '2024-02-14', 'assets/img/triggers/EditAreaScale.png', 44),
-(14, '2024-02-14', 'assets/img/triggers/EditAreaTint.png', 44),
-(15, '2024-02-14', 'assets/img/triggers/BGSwitch.png', 48),
-(16, '2024-02-14', 'assets/img/triggers/GSwitch.png', 48),
-(17, '2024-02-14', 'assets/img/triggers/MGSwitch.png', 48),
-(18, '2024-02-15', 'assets/img/triggers/BGSpeed.png', 51),
-(19, '2024-02-15', 'assets/img/triggers/MGSpeed.png', 51),
-(20, '2024-02-15', 'assets/img/triggers/EnableTrail.png', 53),
-(21, '2024-02-15', 'assets/img/triggers/DisableTrail.png', 53),
-(22, '2024-02-15', 'assets/img/triggers/ShowIcon.png', 55),
-(23, '2024-02-15', 'assets/img/triggers/HideIcon.png', 55),
-(24, '2024-02-15', 'assets/img/triggers/BGEffectOn.png', 56),
-(25, '2024-02-15', 'assets/img/triggers/BGEffectOff.png', 56),
-(26, '2024-02-16', 'assets/img/triggers/EnterFade.png', 59),
-(27, '2024-02-16', 'assets/img/triggers/EnterMove.png', 59),
-(28, '2024-02-16', 'assets/img/triggers/EnterRotate.png', 59),
-(29, '2024-02-16', 'assets/img/triggers/EnterScale.png', 59),
-(30, '2024-02-16', 'assets/img/triggers/EnterTint.png', 59);
+INSERT INTO `imagenes` (`id_imagen`, `uri_img`, `id_seccion`) VALUES
+(4, 'assets/img/triggers/AreaFade.png', 42),
+(5, 'assets/img/triggers/AreaMove.png', 42),
+(6, 'assets/img/triggers/AreaRotate.png', 42),
+(7, 'assets/img/triggers/AreaScale.png', 42),
+(8, 'assets/img/triggers/AreaStop.png', 42),
+(9, 'assets/img/triggers/AreaTint.png', 42),
+(10, 'assets/img/triggers/EditAreaFade.png', 44),
+(11, 'assets/img/triggers/EditAreaMove.png', 44),
+(12, 'assets/img/triggers/EditAreaRotate.png', 44),
+(13, 'assets/img/triggers/EditAreaScale.png', 44),
+(14, 'assets/img/triggers/EditAreaTint.png', 44),
+(15, 'assets/img/triggers/BGSwitch.png', 48),
+(16, 'assets/img/triggers/GSwitch.png', 48),
+(17, 'assets/img/triggers/MGSwitch.png', 48),
+(18, 'assets/img/triggers/BGSpeed.png', 51),
+(19, 'assets/img/triggers/MGSpeed.png', 51),
+(20, 'assets/img/triggers/EnableTrail.png', 53),
+(21, 'assets/img/triggers/DisableTrail.png', 53),
+(22, 'assets/img/triggers/ShowIcon.png', 55),
+(23, 'assets/img/triggers/HideIcon.png', 55),
+(24, 'assets/img/triggers/BGEffectOn.png', 56),
+(25, 'assets/img/triggers/BGEffectOff.png', 56),
+(26, 'assets/img/triggers/EnterFade.png', 59),
+(27, 'assets/img/triggers/EnterMove.png', 59),
+(28, 'assets/img/triggers/EnterRotate.png', 59),
+(29, 'assets/img/triggers/EnterScale.png', 59),
+(30, 'assets/img/triggers/EnterTint.png', 59);
 
 -- --------------------------------------------------------
 
@@ -106,7 +104,6 @@ INSERT INTO `imagenes` (`id_imagen`, `fecha`, `uri_img`, `id_seccion`) VALUES
 CREATE TABLE `secciones` (
   `id_seccion` int(12) NOT NULL,
   `nombre_seccion` varchar(1000) NOT NULL,
-  `fecha` date NOT NULL DEFAULT current_timestamp(),
   `titulo` varchar(200) NOT NULL,
   `seccion_uri` varchar(1000) NOT NULL,
   `has_img` tinyint(1) NOT NULL DEFAULT 0,
@@ -119,56 +116,110 @@ CREATE TABLE `secciones` (
 -- Volcado de datos para la tabla `secciones`
 --
 
-INSERT INTO `secciones` (`id_seccion`, `nombre_seccion`, `fecha`, `titulo`, `seccion_uri`, `has_img`, `imagen_uri`, `has_multiple_img`, `id_categoria`) VALUES
-(4, 'ConceptosBasicos', '2024-02-14', 'Conceptos Basicos', 'guias/Introduccion/ConceptosBasicos.md', 0, NULL, 0, 1),
-(5, 'ElegirCancion', '2024-02-14', 'Elegir una cancion', 'guias/Introduccion/ElegirCancion.md', 0, NULL, 0, 1),
-(6, 'ObjetosGameplay', '2024-02-14', 'Objetos del gameplay', 'guias/Objetos/ObjetosGameplay.md', 0, NULL, 0, 2),
-(11, 'MenuPausa', '2024-02-14', 'Menu de Pausa', 'pendiente', 0, NULL, 0, 1),
-(12, 'PublicarNivel', '2024-02-14', 'Publicar tu nivel', 'pendiente', 0, NULL, 0, 1),
-(14, 'ObjetosAnimados', '2024-02-14', 'Objetos Animados', 'pendiente', 0, NULL, 0, 2),
-(15, 'ObjetosPersonalizados', '2024-02-14', 'Objetos Personalizados', 'pendiente', 0, NULL, 0, 2),
-(16, 'Items', '2024-02-14', 'Items', 'pendiente', 0, NULL, 0, 2),
-(17, 'Grupos', '2024-02-14', 'Editar Grupos', 'pendiente', 0, NULL, 0, 2),
-(18, 'Introduccion', '2024-02-14', 'Introduccion', 'pendiente', 0, NULL, 0, 3),
-(19, 'StartPos', '2024-02-14', 'Start Pos', 'pendiente', 1, 'assets/img/triggers/StartPos.png', 0, 3),
-(24, 'Move', '2024-02-14', 'Move', 'pendiente', 1, 'assets/img/triggers/Move.png', 0, 3),
-(25, 'Stop', '2024-02-14', 'Stop', 'pendiente', 1, 'assets/img/triggers/Stop.png', 0, 3),
-(26, 'Toggle', '2024-02-14', 'Toggle', 'pend', 1, 'assets/img/triggers/Toggle.png', 0, 3),
-(27, 'Spawn', '2024-02-14', 'Spawn', 'pend', 1, 'assets/img/triggers/Spawn.png', 0, 3),
-(28, 'Rotate', '2024-02-14', 'Rotate', 'pend', 1, 'assets/img/triggers/Rotate.png', 0, 3),
-(30, 'Scale', '2024-02-14', 'Scale', 'pend', 1, 'assets/img/triggers/Scale.png', 0, 3),
-(31, 'Touch', '2024-02-14', 'Touch', 'pend', 1, 'assets/img/triggers/Touch.png', 0, 3),
-(32, 'OnDeath', '2024-02-14', 'On Death', 'pend', 1, 'assets/img/triggers/OnDeath.png', 0, 3),
-(33, 'Options', '2024-02-14', 'Options', 'pend', 1, 'assets/img/triggers/Options.png', 0, 3),
-(34, 'Color', '2024-02-14', 'Color', 'pend', 1, 'assets/img/triggers/Color.png', 0, 4),
-(35, 'Pulse', '2024-02-14', 'Pulse', 'pend', 1, 'assets/img/triggers/Pulse.png', 0, 4),
-(36, 'Alpha', '2024-02-14', 'Alpha', 'pend', 1, 'assets/img/triggers/Alpha.png', 0, 4),
-(37, 'Shake', '2024-02-14', 'Shake', 'pend', 1, 'assets/img/triggers/Shake.png', 0, 4),
-(38, 'Animate', '2024-02-14', 'Animate', 'pend', 1, 'assets/img/triggers/Animate.png', 0, 4),
-(39, 'KeyFrame', '2024-02-14', 'Keyframe Animation', 'pend', 1, 'assets/img/triggers/Keyframe.png', 0, 4),
-(40, 'Keyframe', '2024-02-14', 'Keyframe', 'pend', 1, 'assets/img/triggers/KeyframeArrow.png', 0, 4),
-(42, 'AreaTriggers', '2024-02-14', 'Area Triggers', 'pend', 1, NULL, 1, 4),
-(44, 'EditArea', '2024-02-14', 'Edit Area Triggers', 'pend', 1, NULL, 1, 4),
-(46, 'AreaStop', '2024-02-14', 'Area Stop', 'pend', 1, 'assets/img/triggers/AreaStop.png', 0, 4),
-(48, 'ChangeBG', '2024-02-14', 'Change BG/G/MG', 'pend', 1, NULL, 1, 4),
-(49, 'SpawnParticles', '2024-02-15', 'Spawn Particles', 'pendiente', 1, 'assets/img/triggers/SpawnParticle.png', 0, 4),
-(50, 'SetupMG', '2024-02-15', 'Setup MG', 'pendiente', 1, 'assets/img/triggers/MG.png', 0, 4),
-(51, 'BGSpeed', '2024-02-15', 'BG/MG Speed', 'pendiente', 1, NULL, 1, 4),
-(53, 'ToggleTrail', '2024-02-15', 'Enable/Disable Trail', 'pendiente', 1, NULL, 1, 4),
-(55, 'ShowHide', '2024-02-15', 'Show/Hide', 'pendiente', 1, NULL, 1, 4),
-(56, 'BGEffect', '2024-02-15', 'BG Effect On/Off', 'pendiente', 1, NULL, 1, 4),
-(57, 'Gradient', '2024-02-15', 'Gradient', 'pendiente', 1, 'assets/img/triggers/Gradient.png', 0, 4),
-(58, 'EnterEffects', '2024-02-15', 'Enter Effects', 'pendiente', 0, NULL, 0, 4),
-(59, 'EnterTriggers', '2024-02-16', 'Move/Rotate/Scale/Fade/Tint Enter', 'pendiente', 1, NULL, 1, 4),
-(60, 'StopEnter', '2024-02-16', 'Stop Enter', 'pendiente', 1, 'assets/img/triggers/EnterStop.png', 0, 4),
-(61, 'CameraZoom', '2024-02-16', 'Zoom', 'pendiente', 1, 'assets/img/triggers/CameraZoom.png', 0, 5),
-(62, 'CameraStatic', '2024-02-16', 'Static Camera', 'pendiente', 1, 'assets/img/triggers/CameraStatic.png', 0, 5),
-(63, 'CameraOffset', '2024-02-16', 'Camera Offset', 'pendiente', 1, 'assets/img/triggers/CameraOffset.png', 0, 5),
-(64, 'GPOffset', '2024-02-16', 'Gameplay Offset', 'pend', 1, 'assets/img/triggers/GPOffset.png', 0, 5),
-(65, 'CameraRotate', '2024-02-16', 'Camera Rotation', 'pendiente', 1, 'assets/img/triggers/CameraRotate.png', 0, 5),
-(66, 'CameraEdge', '2024-02-16', 'Camera Edge', 'pendiente', 1, 'assets/img/triggers/CameraEdge.png', 0, 5),
-(67, 'CameraGuide', '2024-02-16', 'Camera Guide', 'pendiente', 1, 'assets/img/triggers/CameraGuide.png', 0, 5),
-(68, 'CameraMode', '2024-02-16', 'Camera Mode', 'pendiente', 1, 'assets/img/triggers/CameraMode.png', 0, 5);
+INSERT INTO `secciones` (`id_seccion`, `nombre_seccion`, `titulo`, `seccion_uri`, `has_img`, `imagen_uri`, `has_multiple_img`, `id_categoria`) VALUES
+(4, 'ConceptosBasicos', 'Conceptos Basicos', 'guias/Introduccion/ConceptosBasicos.md', 0, NULL, 0, 1),
+(5, 'ElegirCancion', 'Elegir una cancion', 'guias/Introduccion/ElegirCancion.md', 0, NULL, 0, 1),
+(6, 'ObjetosGameplay', 'Objetos del gameplay', 'guias/Objetos/ObjetosGameplay.md', 0, NULL, 0, 2),
+(11, 'MenuPausa', 'Menu de Pausa', 'pendiente', 0, NULL, 0, 1),
+(12, 'PublicarNivel', 'Publicar tu nivel', 'pendiente', 0, NULL, 0, 1),
+(14, 'ObjetosAnimados', 'Objetos Animados', 'pendiente', 0, NULL, 0, 2),
+(15, 'ObjetosPersonalizados', 'Objetos Personalizados', 'pendiente', 0, NULL, 0, 2),
+(16, 'Items', 'Items', 'pendiente', 0, NULL, 0, 2),
+(17, 'Grupos', 'Editar Grupos', 'pendiente', 0, NULL, 0, 2),
+(18, 'Introduccion', 'Introduccion', 'pendiente', 0, NULL, 0, 3),
+(19, 'StartPos', 'Start Pos', 'pendiente', 1, 'assets/img/triggers/StartPos.png', 0, 3),
+(24, 'Move', 'Move', 'pendiente', 1, 'assets/img/triggers/Move.png', 0, 3),
+(25, 'Stop', 'Stop', 'pendiente', 1, 'assets/img/triggers/Stop.png', 0, 3),
+(26, 'Toggle', 'Toggle', 'pend', 1, 'assets/img/triggers/Toggle.png', 0, 3),
+(27, 'Spawn', 'Spawn', 'pend', 1, 'assets/img/triggers/Spawn.png', 0, 3),
+(28, 'Rotate', 'Rotate', 'pend', 1, 'assets/img/triggers/Rotate.png', 0, 3),
+(30, 'Scale', 'Scale', 'pend', 1, 'assets/img/triggers/Scale.png', 0, 3),
+(31, 'Touch', 'Touch', 'pend', 1, 'assets/img/triggers/Touch.png', 0, 3),
+(32, 'OnDeath', 'On Death', 'pend', 1, 'assets/img/triggers/OnDeath.png', 0, 3),
+(33, 'Options', 'Options', 'pend', 1, 'assets/img/triggers/Options.png', 0, 3),
+(34, 'Color', 'Color', 'pend', 1, 'assets/img/triggers/Color.png', 0, 4),
+(35, 'Pulse', 'Pulse', 'pend', 1, 'assets/img/triggers/Pulse.png', 0, 4),
+(36, 'Alpha', 'Alpha', 'pend', 1, 'assets/img/triggers/Alpha.png', 0, 4),
+(37, 'Shake', 'Shake', 'pend', 1, 'assets/img/triggers/Shake.png', 0, 4),
+(38, 'Animate', 'Animate', 'pendejo es yahir', 1, 'assets/img/triggers/Animate.png', 0, 4),
+(39, 'KeyFrame', 'Keyframe Animation', 'pend', 1, 'assets/img/triggers/Keyframe.png', 0, 4),
+(40, 'Keyframe', 'Keyframe', 'pend', 1, 'assets/img/triggers/KeyframeArrow.png', 0, 4),
+(42, 'AreaTriggers', 'Area Triggers', 'pend', 1, NULL, 1, 4),
+(44, 'EditArea', 'Edit Area Triggers', 'pend', 1, NULL, 1, 4),
+(46, 'AreaStop', 'Area Stop', 'pend', 1, 'assets/img/triggers/AreaStop.png', 0, 4),
+(48, 'ChangeBG', 'Change BG/G/MG', 'pend', 1, NULL, 1, 4),
+(49, 'SpawnParticles', 'Spawn Particles', 'pendiente', 1, 'assets/img/triggers/SpawnParticle.png', 0, 4),
+(50, 'SetupMG', 'Setup MG', 'pendiente', 1, 'assets/img/triggers/MG.png', 0, 4),
+(51, 'BGSpeed', 'BG/MG Speed', 'pendiente', 1, NULL, 1, 4),
+(53, 'ToggleTrail', 'Enable/Disable Trail', 'pendiente', 1, NULL, 1, 4),
+(55, 'ShowHide', 'Show/Hide', 'pendiente', 1, NULL, 1, 4),
+(56, 'BGEffect', 'BG Effect On/Off', 'pendiente', 1, NULL, 1, 4),
+(57, 'Gradient', 'Gradient', 'pendiente', 1, 'assets/img/triggers/Gradient.png', 0, 4),
+(58, 'EnterEffects', 'Enter Effects', 'pendiente', 0, NULL, 0, 4),
+(59, 'EnterTriggers', 'Move/Rotate/Scale/Fade/Tint Enter', 'pendiente', 1, NULL, 1, 4),
+(60, 'StopEnter', 'Stop Enter', 'pendiente', 1, 'assets/img/triggers/EnterStop.png', 0, 4),
+(61, 'CameraZoom', 'Zoom', 'pendiente', 1, 'assets/img/triggers/CameraZoom.png', 0, 5),
+(62, 'CameraStatic', 'Static Camera', 'pendiente', 1, 'assets/img/triggers/CameraStatic.png', 0, 5),
+(63, 'CameraOffset', 'Camera Offset', 'pendiente', 1, 'assets/img/triggers/CameraOffset.png', 0, 5),
+(64, 'GPOffset', 'Gameplay Offset', 'pend', 1, 'assets/img/triggers/GPOffset.png', 0, 5),
+(65, 'CameraRotate', 'Camera Rotation', 'pendiente', 1, 'assets/img/triggers/CameraRotate.png', 0, 5),
+(66, 'CameraEdge', 'Camera Edge', 'pendiente', 1, 'assets/img/triggers/CameraEdge.png', 0, 5),
+(67, 'CameraGuide', 'Camera Guide', 'pendiente', 1, 'assets/img/triggers/CameraGuide.png', 0, 5),
+(68, 'CameraMode', 'Camera Mode', 'pendiente', 1, 'assets/img/triggers/CameraMode.png', 0, 5),
+(69, 'Song', 'Song', 'pendiente', 1, 'assets/img/triggers/Song.png', 0, 6),
+(70, 'EditSong', 'Edit Song', 'pendiente', 1, 'assets/img/triggers/EditSong.png', 0, 6),
+(71, 'SFX', 'SFX', 'pendiente', 1, 'assets/img/triggers/SFX.png', 0, 6),
+(72, 'EditSFX', 'Edit SFX', 'pendiente', 1, 'assets/img/triggers/EditSFX.png', 0, 6),
+(73, 'BPM', 'BPM Guide', 'pendiente', 1, 'assets/img/triggers/EditSFX.png', 0, 6),
+(74, 'Shader', 'Shader', 'pendiente', 1, 'assets/img/triggers/Shader.png', 0, 7),
+(75, 'ShockWave', 'ShockWave', 'pendiente', 1, 'assets/img/triggers/ShockWave.png', 0, 7),
+(76, 'ShockLine', 'ShockLine', 'pendiente', 1, 'assets/img/triggers/ShockLine.png', 0, 7),
+(77, 'Glitch', 'Glitch', 'pendiente', 1, 'assets/img/triggers/Glitch.png', 0, 7),
+(78, 'Chromatic', 'Chromatic', 'pendiente', 1, 'assets/img/triggers/Chromatic.png', 0, 7),
+(79, 'ChromaticGlitch', 'Chromatic Glitch', 'pendiente', 1, 'assets/img/triggers/ChromaticGlitch.png', 0, 7),
+(80, 'Pixelate', 'Pixelate', 'pendiente', 1, 'assets/img/triggers/Pixelate.png', 0, 7),
+(83, 'LensCircle', 'Lens Circle', 'pendiente', 1, 'assets/img/triggers/LensCircle.png', 0, 7),
+(84, 'RadialBlur', 'Radial Blur', 'pendiente', 1, 'assets/img/triggers/RadialBlur.png', 0, 7),
+(85, 'MotionBlur', 'Motion Blur', 'pendiente', 1, 'assets/img/triggers/MotionBlur.png', 0, 7),
+(86, 'Bulge', 'Bulge', 'pendiente', 1, 'assets/img/triggers/Bulge.png', 0, 7),
+(87, 'Pinch', 'Pinch', 'pendiente', 1, 'assets/img/triggers/Pinch.png', 0, 7),
+(88, 'GrayScale', 'Gray Scale', 'pendiente', 1, 'assets/img/triggers/GrayScale.png', 0, 7),
+(89, 'Sepia', 'Sepia', 'pendiente', 1, 'assets/img/triggers/Sepia.png', 0, 7),
+(90, 'InvertColor', 'Invert Color', 'pendiente', 1, 'assets/img/triggers/InvertColor.png', 0, 7),
+(91, 'Hue', 'Hue', 'pendiente', 1, 'assets/img/triggers/Hue.png', 0, 7),
+(92, 'EditColor', 'Edit Color', 'pendiente', 1, 'assets/img/triggers/EditColor.png', 0, 7),
+(93, 'SplitScreen', 'Split Screen', 'pendiente', 1, 'assets/img/triggers/SplitScreen.png', 0, 7),
+(94, 'Reverse', 'Reverse', 'pendiente', 1, 'assets/img/triggers/Reverse.png', 0, 8),
+(95, 'RotateGP', 'Rotate Gameplay', 'pendiente', 1, 'assets/img/triggers/GPRotate.png', 0, 8),
+(96, 'Event', 'Event', 'pendiente', 1, 'assets/img/triggers/Event.png', 0, 8),
+(97, 'TimeWarp', 'TimeWarp', 'pendiente', 1, 'assets/img/triggers/TimeWarp.png', 0, 8),
+(98, 'End', 'End', 'pendiente', 1, 'assets/img/triggers/End.png', 0, 8),
+(99, 'PlayerControl', 'Player Control', 'pendiente', 1, 'assets/img/triggers/PlayerControl.png', 0, 8),
+(100, 'Gravity', 'Gravity', 'pendiente', 1, 'assets/img/triggers/Gravity.png', 0, 8),
+(101, 'Teleport', 'Teleport', 'pendiente', 1, 'assets/img/triggers/Teleport.png', 0, 8),
+(102, 'Count', 'Count', 'pendiente', 1, 'assets/img/triggers/Count.png', 1, 9),
+(103, 'InstantCount', 'Instant Count', 'pendiente', 1, 'assets/img/triggers/InstantCount.png', 0, 9),
+(104, 'Pickup', 'Pickup', 'pendiente', 1, 'assets/img/triggers/Pickup.png', 0, 9),
+(105, 'Time', 'Time', 'pendiente', 1, 'assets/img/triggers/TimerTime.png', 0, 9),
+(106, 'TimeEvent', 'Time Event', 'pendiente', 1, 'assets/img/triggers/TimerEvent.png', 0, 9),
+(107, 'TimeControl', 'Time Control', 'pendiente', 1, 'assets/img/triggers/TimerControl.png', 0, 9),
+(108, 'ItemEdit', 'Item Edit', 'pendiente', 1, 'assets/img/triggers/ItemEdit.png', 0, 9),
+(109, 'ItemComp', 'Item Compare', 'pendiente', 1, 'assets/img/triggers/ItemComp.png', 0, 9),
+(110, 'ItemPers', 'Persistent Item', 'pendiente', 1, 'assets/img/triggers/ItemPers.png', 0, 9),
+(111, 'Reset', 'Reset', 'pendiente', 1, 'assets/img/triggers/Reset.png', 0, 9),
+(112, 'CounterLabel', 'Counter Label', 'pendiente', 0, NULL, 0, 9),
+(113, 'Collision', 'Collision', 'pendiente', 1, 'assets/img/triggers/Collision.png', 0, 10),
+(114, 'InstantCollision', 'Instant Collision', 'pendiente', 1, 'assets/img/triggers/InstantCollision.png', 0, 10),
+(115, 'CollisionState', 'Collision State', 'pendiente', 1, 'assets/img/triggers/CollisionState.png', 0, 10),
+(116, 'CollisionBlock', 'Collision Block', 'pendiente', 1, 'assets/img/triggers/CollisionBlock.png', 0, 10),
+(117, 'Random', 'Random', 'pendiente', 1, 'assets/img/triggers/Random.png', 0, 11),
+(118, 'AdvRandom', 'Advanced Random', 'pendiente', 1, 'assets/img/triggers/AdvRandom.png', 0, 11),
+(119, 'Sequence', 'Sequence', 'pendiente', 1, 'assets/img/triggers/Sequence.png', 0, 11),
+(120, 'UI', 'UI Settings', 'pendiente', 1, 'assets/img/triggers/UI.png', 0, 11),
+(121, 'LinkVisible', 'Visibility Link', 'pendiente', 1, 'assets/img/triggers/LinkVisible.png', 0, 11),
+(125, 'Canales', 'Canales', 'pendiente', 0, NULL, 0, 12),
+(126, 'Keyframes', 'Keyframes', 'pendiente', 0, NULL, 0, 12),
+(127, 'AutoBuild', 'Auto-Build', 'pendiente', 0, NULL, 0, 12);
 
 --
 -- Índices para tablas volcadas
@@ -214,7 +265,7 @@ ALTER TABLE `imagenes`
 -- AUTO_INCREMENT de la tabla `secciones`
 --
 ALTER TABLE `secciones`
-  MODIFY `id_seccion` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id_seccion` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
 -- Restricciones para tablas volcadas
