@@ -4,6 +4,7 @@ require "config/connection.php";
 
 $categories = $conn->query("SELECT * FROM categorias");
 
+
 ?>
 
 <!DOCTYPE html>
@@ -75,21 +76,13 @@ $categories = $conn->query("SELECT * FROM categorias");
 <!-- Carga de categorias y secciones -->
 
     <?php if ($categories->rowCount() == 0): ?>
-        
         <?php echo "No hay contenido en la pagina";?>
-
     <?php endif ?>
-
     <?php foreach ($categories as $category): ?>
-
         <div class="section unselectable">
-
         <span><?= $category["titulo"]?></span>
-        
         <div class="section-links">
-
         <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
-
         <?php foreach ($sections as $section): ?>
     <?php if ($section["has_img"] == 0): ?>
         <a class="gd-button" href="pagina.html#<?= $section["nombre_seccion"] ?>">
@@ -114,13 +107,8 @@ $categories = $conn->query("SELECT * FROM categorias");
         <?php endif ?>
     <?php endif ?>
 <?php endforeach ?>
-
-
         </div>
     </div>
-
-    
-
     <?php endforeach ?>
 
 <script src="https://unpkg.com/@popperjs/core@2"></script>
