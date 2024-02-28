@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'Introduccion': [
             { name: 'Conceptos Basicos', path: 'https://raw.githubusercontent.com/ItsWhisp/GuiaEditorGD/main/guias/Introduccion/ConceptosBasicos.md', flag: 1 },
             { name: 'Elegir una cancion', path: 'guias/Introduccion/ElegirCancion.md', flag: 1 },
-            // { name: 'Menu de pausa', path: '/guias/Introduccion/MenuPausa.md', flag: 1 },
-            // { name: 'Publiicar tu nivel', path: '/guias/Introduccion/PublicarNivel.md', flag: 1 },
+            { name: 'Menu de pausa', path: '/guias/Introduccion/MenuPausa.md', flag: 1 },
+            { name: 'Publiicar tu nivel', path: '/guias/Introduccion/PublicarNivel.md', flag: 1 },
         ],
         'Objetos': [
             { name: 'Objetos del gameplay', path: 'guias/Objetos/ObjetosGameplay.md', flag: 1 },
