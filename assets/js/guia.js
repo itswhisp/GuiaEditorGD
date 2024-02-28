@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var guides = {
         // Flags, 1: No Traducida, 2: Contiene Errores, 3: Desactualizada
         'Introduccion': [
-            { name: 'Conceptos Basicos', path: 'guias/Introduccion/ConceptosBasicos.md', flag: 1 },
+            { name: 'Conceptos Basicos', path: 'https://raw.githubusercontent.com/ItsWhisp/GuiaEditorGD/main/guias/Introduccion/ConceptosBasicos.md', flag: 1 },
             { name: 'Elegir una cancion', path: 'guias/Introduccion/ElegirCancion.md', flag: 1 },
             // { name: 'Menu de pausa', path: '/guias/Introduccion/MenuPausa.md', flag: 1 },
             // { name: 'Publiicar tu nivel', path: '/guias/Introduccion/PublicarNivel.md', flag: 1 },
