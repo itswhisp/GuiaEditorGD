@@ -1,6 +1,6 @@
 ## Conceptos Basicos
 
-### Getting Started
+### Para empezar
 
 First, you have to find your way to the editor. On the main menu, click the right button, and then click "Create" in the top left. This brings you to the screen in figure 1.1, which is your list of custom levels. Note that levels here are not public, but rather custom levels saved locally on your account. Public levels are accessed through the bottom left button. More on that later. To start a new level, do as the text says and click "New" in the bottom right.
 
