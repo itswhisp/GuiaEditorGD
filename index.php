@@ -21,8 +21,8 @@ $categories = $conn->query("SELECT * FROM categorias");
 
 <body>
 
-<!-- Creditos -->
-<div class="overlay hidden" id="credits">
+    <!-- Creditos -->
+    <div class="overlay hidden" id="credits">
         <div class="dialog">
             <img class="arrow left hidden" src="assets/img/left.png">
             <img class="close" src="assets/img/close.png"
@@ -48,6 +48,10 @@ $categories = $conn->query("SELECT * FROM categorias");
                         <span class="small">Parte del codigo de la interfaz</span>
                         <a href="https://gdbrowser.com/" target="_blank" class="smaller">(GD Browser)</a>
                     </div>
+                    <p class="disclaimer unselectable">"Geometry Dash", sus texturas y demás archivos utilizados dentro
+                        de este sitio
+                        web son propiedad de RobTop Games.
+                    </p>
                 </div>
             </div>
             <img class="arrow right" src="assets/img/right.png">
@@ -73,45 +77,47 @@ $categories = $conn->query("SELECT * FROM categorias");
         </a>
     </div>
 
-<!-- Carga de categorias y secciones -->
+    <!-- Carga de categorias y secciones -->
 
     <?php if ($categories->rowCount() == 0): ?>
-        <?php echo "No hay contenido en la pagina";?>
+    <?php echo "No hay contenido en la pagina"; ?>
     <?php endif ?>
     <?php foreach ($categories as $category): ?>
-        <div class="section unselectable">
-        <span><?= $category["titulo"]?></span>
+    <div class="section unselectable">
+        <span>
+            <?= $category["titulo"] ?>
+        </span>
         <div class="section-links">
-        <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
-        <?php foreach ($sections as $section): ?>
-    <?php if ($section["has_img"] == 0): ?>
-        <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
-            <?= $section["titulo"] ?>
-        </a>
-    <?php elseif ($section["has_img"] == 1): ?>
-        <?php if ($section["has_multiple_img"] == 0): ?>
+            <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
+            <?php foreach ($sections as $section): ?>
+            <?php if ($section["has_img"] == 0): ?>
+            <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
+                <?= $section["titulo"] ?>
+            </a>
+            <?php elseif ($section["has_img"] == 1): ?>
+            <?php if ($section["has_multiple_img"] == 0): ?>
             <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
                 <img src="<?= $section["imagen_uri"] ?>">
                 <?= $section["titulo"] ?>
             </a>
-        <?php elseif ($section["has_multiple_img"] == 1): ?> 
+            <?php elseif ($section["has_multiple_img"] == 1): ?>
             <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
-                <?php 
-                $imgs = $conn->query("SELECT * FROM imagenes WHERE id_seccion = {$section['id_seccion']}");
-                foreach ($imgs as $img): 
-                ?>
-                    <img src="<?= $img["uri_img"] ?>">
+                <?php
+                                $imgs = $conn->query("SELECT * FROM imagenes WHERE id_seccion = {$section['id_seccion']}");
+                                foreach ($imgs as $img):
+                                    ?>
+                <img src="<?= $img["uri_img"] ?>">
                 <?php endforeach ?>
                 <?= $section["titulo"] ?>
             </a>
-        <?php endif ?>
-    <?php endif ?>
-<?php endforeach ?>
+            <?php endif ?>
+            <?php endif ?>
+            <?php endforeach ?>
         </div>
     </div>
     <?php endforeach ?>
 
-<script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="assets/js/index.js"></script>
 </body>
