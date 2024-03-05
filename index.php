@@ -75,26 +75,26 @@ $categories = $conn->query("SELECT * FROM categorias");
 
 <!-- Carga de categorias y secciones -->
 
-    <?php if ($categories->rowCount() == 0): ?>
+    <?php if ($categories->rowCount() == 0): //Si no hay categorias ?>
         <?php echo "No hay contenido en la pagina";?>
     <?php endif ?>
-    <?php foreach ($categories as $category): ?>
+    <?php foreach ($categories as $category): //Inicia la carga de categorias?>
         <div class="section unselectable">
         <span><?= $category["titulo"]?></span>
         <div class="section-links">
         <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
-        <?php foreach ($sections as $section): ?>
-    <?php if ($section["has_img"] == 0): ?>
+        <?php foreach ($sections as $section): //Si no hay imagenes solo muestra el boton sin nada ?>
+    <?php if ($section["has_img"] == 0): //Si hay imagenes inicia el proceso de cargar una imagen o muchas imagenes?>
         <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
             <?= $section["titulo"] ?>
         </a>
-    <?php elseif ($section["has_img"] == 1): ?>
-        <?php if ($section["has_multiple_img"] == 0): ?>
+    <?php elseif ($section["has_img"] == 1):?>
+        <?php if ($section["has_multiple_img"] == 0): //Si solo hay una imagen, entonces solo carga una imagen?>
             <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
                 <img src="<?= $section["imagen_uri"] ?>">
                 <?= $section["titulo"] ?>
             </a>
-        <?php elseif ($section["has_multiple_img"] == 1): ?> 
+        <?php elseif ($section["has_multiple_img"] == 1): //Si hay muchas imagenes, entonces inicia a cargar las imagenes multiples?> 
             <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
                 <?php 
                 $imgs = $conn->query("SELECT * FROM imagenes WHERE id_seccion = {$section['id_seccion']}");
