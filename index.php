@@ -52,6 +52,10 @@ $categories = $conn->query("SELECT * FROM categorias");
                         de este sitio
                         web son propiedad de RobTop Games.
                     </p>
+                    <p class="disclaimer unselectable">"Geometry Dash", sus texturas y demás archivos utilizados dentro
+                        de este sitio
+                        web son propiedad de RobTop Games.
+                    </p>
                 </div>
             </div>
             <img class="arrow right" src="assets/img/right.png">
@@ -78,14 +82,16 @@ $categories = $conn->query("SELECT * FROM categorias");
     </div>
 
 
-<!-- Carga de categorias y secciones -->
+    <!-- Carga de categorias y secciones -->
 
     <?php if ($categories->rowCount() == 0): //Si no hay categorias ?>
-        <?php echo "No hay contenido en la pagina";?>
+    <?php echo "No hay contenido en la pagina"; ?>
     <?php endif ?>
     <?php foreach ($categories as $category): //Inicia la carga de categorias?>
-        <div class="section unselectable">
-        <span><?= $category["titulo"]?></span>
+    <div class="section unselectable">
+        <span>
+            <?= $category["titulo"] ?>
+        </span>
         <div class="section-links">
         <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
         <?php foreach ($sections as $section): //Si no hay imagenes solo muestra el boton sin nada ?>
@@ -95,28 +101,46 @@ $categories = $conn->query("SELECT * FROM categorias");
         </a>
     <?php elseif ($section["has_img"] == 1):?>
         <?php if ($section["has_multiple_img"] == 0): //Si solo hay una imagen, entonces solo carga una imagen?>
+    <?php if ($categories->rowCount() == 0): ?>
+    <?php echo "No hay contenido en la pagina"; ?>
+    <?php endif ?>
+    <?php foreach ($categories as $category): //Inicia la carga de categorias?>
+    <div class="section unselectable">
+        <span>
+            <?= $category["titulo"] ?>
+        </span>
+        <div class="section-links">
+            <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
+            <?php foreach ($sections as $section): //Si no hay imagenes solo muestra el boton sin nada ?>
+            <?php if ($section["has_img"] == 0): //Si hay imagenes inicia el proceso de cargar una imagen o muchas imagenes?>
+            <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
+                <?= $section["titulo"] ?>
+            </a>
+            <?php elseif ($section["has_img"] == 1):?>
+            <?php if ($section["has_multiple_img"] == 0): //Si solo hay una imagen, entonces solo carga una imagen?>
             <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
                 <img src="<?= $section["imagen_uri"] ?>">
                 <?= $section["titulo"] ?>
             </a>
         <?php elseif ($section["has_multiple_img"] == 1): //Si hay muchas imagenes, entonces inicia a cargar las imagenes multiples?> 
+            <?php elseif ($section["has_multiple_img"] == 1): ?>
             <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
-                <?php 
-                $imgs = $conn->query("SELECT * FROM imagenes WHERE id_seccion = {$section['id_seccion']}");
-                foreach ($imgs as $img): 
-                ?>
-                    <img src="<?= $img["uri_img"] ?>">
+                <?php
+                                $imgs = $conn->query("SELECT * FROM imagenes WHERE id_seccion = {$section['id_seccion']}");
+                                foreach ($imgs as $img):
+                                    ?>
+                <img src="<?= $img["uri_img"] ?>">
                 <?php endforeach ?>
                 <?= $section["titulo"] ?>
             </a>
-        <?php endif ?>
-    <?php endif ?>
-<?php endforeach ?>
+            <?php endif ?>
+            <?php endif ?>
+            <?php endforeach ?>
         </div>
     </div>
     <?php endforeach ?>
 
-<script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="assets/js/index.js"></script>
 </body>
