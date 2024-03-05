@@ -184,3 +184,9 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.thanks-container .disclaimer {
+    opacity: 0.7;
+    color: #000;
+    font-size: 0.6em;
+}
