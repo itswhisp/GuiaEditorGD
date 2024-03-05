@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$database = "guia";
+$database = "guia_editor";
 $user = "root";
 $password = "";
 
