@@ -101,10 +101,10 @@ body {
 
 .thanks-container {
     display: grid;
+    margin: 14px 0 20px 0;
     grid-gap: 15px;
     align-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .thanks-item {
@@ -181,12 +181,14 @@ body {
     }
 
     .thanks-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
     }
 }
 
-.thanks-container .disclaimer {
+.credits-page .disclaimer {
     opacity: 0.7;
     color: #000;
     font-size: 0.6em;
+    text-wrap: balance;
+    max-width: 600px;
 }

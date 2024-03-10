@@ -1,5 +1,5 @@
 # Guia del Editor
-Traduccion no oficial al español de la guia del editor de Geometry Dash, puedes visitar el sitio web [aqui](https://guia.jorge603.xyz)
+Traduccion no oficial al español de la guia del editor de Geometry Dash, puedes visitar el sitio web [aqui](https://guia.editorgd.xyz)
 
 ![](GuiaEditor.png)
 

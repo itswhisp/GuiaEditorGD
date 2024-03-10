@@ -31,7 +31,7 @@ $categories = $conn->query("SELECT * FROM categorias");
                 <span>Creditos</span>
                 <img class="icon" src="assets/img/credits/whisp.png">
                 <a href="https://twitter.com/whispgd" target="_blank" class="gold">ItsWhisp</a>
-                <span class="small">Diseño de la pagina</span>
+                <span class="small">Diseño y estructura de la pagina</span>
             </div>
             <div class="credits-page 02 hidden">
                 <span>Creditos</span>
@@ -40,19 +40,20 @@ $categories = $conn->query("SELECT * FROM categorias");
                 <span class="small">Hosting, dominio y funciones</span>
             </div>
             <div class="credits-page 03 hidden">
-                <span style="color: rgb(0, 255, 0);">Agradecimientos<br>Especiales</span>
+                <span style="color: rgb(0, 255, 0);">Agradecimientos Especiales</span>
                 <div class="thanks-container">
                     <div class="thanks-item">
                         <img class="icon" style="height: 60px; padding: 10px 0;" src="assets/img/credits/colon.png">
                         <a href="https://twitter.com/TheRealGDColon" target="_blank" class="gold">Colon</a>
-                        <span class="small">Parte del codigo de la interfaz</span>
-                        <a href="https://gdbrowser.com/" target="_blank" class="smaller">(GD Browser)</a>
                     </div>
-                    <p class="disclaimer unselectable">"Geometry Dash", sus texturas y demás archivos utilizados dentro
-                        de este sitio
-                        web son propiedad de RobTop Games.
-                    </p>
+                    <div class="thanks-item">
+                        <img class="icon" style="height: 60px; padding: 10px 0;"
+                            src="assets/img/credits/spacedream.png">
+                        <a href="https://twitter.com/space_sd" target="_blank" class="gold">SpaceDream</a>
+                    </div>
                 </div>
+                <p class="disclaimer unselectable">"Geometry Dash", sus texturas y demás archivos utilizados dentro
+                    de este sitio web son propiedad de RobTop Games.</p>
             </div>
             <img class="arrow right" src="assets/img/right.png">
         </div>
@@ -78,9 +79,9 @@ $categories = $conn->query("SELECT * FROM categorias");
     </div>
 
 
- <!-- Carga de categorias y secciones -->
+    <!-- Carga de categorias y secciones -->
 
- <?php if ($categories->rowCount() == 0): ?>
+    <?php if ($categories->rowCount() == 0): ?>
     <?php echo "No hay contenido en la pagina"; ?>
     <?php endif ?>
     <?php foreach ($categories as $category): ?>
