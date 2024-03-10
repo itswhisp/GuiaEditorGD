@@ -4,7 +4,7 @@
 
 Items are found in the tenth tab of the editor, and consist of various objects that are suitable as Collectables. This means that they can be picked up throughout the level, whether they are optional extra challenges or necessary to advance. You can also use many of these as decorations if you wish. The first page of the tab is seen here:
 
-![](https://guia.jorge603.xyz/assets/img/figures/56.png)
+![](https://guia.editorgd.xyz/assets/img/figures/56.png)
 *Figure 5.1: The Items tab.*<br>
 
 ### User Coins
@@ -13,7 +13,7 @@ The first object in the tab are User Coins. These are the most used Collectables
 ### Custom Collectables
 All other objects in the tab function as custom Collectables. You can assign specific actions to them that will be activated once they get collected. This can be editing a specific Item ID, activating or deactivating a specific Group ID, or assigning Points that add up for the player. To access these options, first place the Collectable you want to use and click "Edit Special". This opens the following menu:
 
-![](https://guia.jorge603.xyz/assets/img/figures/57.png)
+![](https://guia.editorgd.xyz/assets/img/figures/57.png)
 *Figure 5.2: The "Edit Special" menu for custom Collectables.*<br>
 
 You can use "Pickup Item" to change the value of an Item ID. Item IDs are variables that can be edited and referenced throughout the level. Enter the Item ID you want to change in the "ItemID" field. By default, the Item ID will be increased by one. By enabling the "Sub Count" option, it will be decreased by one instead. You can read the Pickup Trigger section, as well as the various Item Triggers, for more information on Item IDs.

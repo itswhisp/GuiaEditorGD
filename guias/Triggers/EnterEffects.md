@@ -1,0 +1,21 @@
+## Enter Effects
+Changes how blocks enter and/or exit the screen.
+
+- **Target Enter Channel:** Input a Enter Channel ID and assign an Enter Channel ID to objects. The Enter Effect will only affect the objects with the same Enter Channel ID. By default, all blocks will be affected.
+- **Enter Only/Exit Only:** The effect will only be displayed when the objects enter or exit the screen respectively.
+
+| Effect | Explanation | Example |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------- |
+| ![](https://guia.editorgd.xyz/assets/img/figures/142.png) | The objects do not scale in and out, but they still fade in and out | ![](https://guia.editorgd.xyz/assets/img/figures/143.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/144.png) | The objects do not scale in and out, but they still fade in and out | ![](https://guia.editorgd.xyz/assets/img/figures/145.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/146.png) | Objects enter the screen by moving up from the bottom and fading in. Objects exit the screen by moving down and fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/147.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/148.png) | Objects enter the screen by appearing from behind the blocks and moving to the right. Objects exit the screen by moving to the left and fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/149.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/150.png) | Objects enter the screen by moving in from the right and fading in. Objects exit the screen by disappearing behind the blocks and fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/151.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/152.png) | Objects enter the screen by scaling up and fading in. Objects exit the screen by scaling down and fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/153.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/154.png) | Objects enter the screen by scaling down and fading in. Objects exit the screen by scaling up and fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/155.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/156.png) | Objects enter and exit the screen in a chaotic movement, fading and out respectively. | ![](https://guia.editorgd.xyz/assets/img/figures/157.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/158.png) | Objects enter the screen by the top half moving down, and the bottom half moving up. They also appear from behind the blocks and move to the right and fade in. Objects exit the screen by splitting in half, with the top moving up and the bottom moving down while moving to the left and fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/159.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/160.png) | Objects enter the screen by the top half moving down and the bottom half moving up. They move in from the right and fade in. Objects exit the screen by splitting in half, with the top moving up and the bottom moving down while disappearing behind the blocks and fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/161.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/162.png) | Objects enter the screen by the top half moving down and the bottom half moving up while fading in. Objects exit the screen by splitting in half, with the top moving up and the bottom moving down while fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/163.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/164.png) | Objects enter the screen by the top half moving up and the bottom half moving down while fading in. Objects exit the screen by splitting in half, with the top moving down and the bottom moving up while fading out. | ![](https://guia.editorgd.xyz/assets/img/figures/165.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/166.png) | Objects do not fade in and out and also do not have an Enter Effect. | ![](https://guia.editorgd.xyz/assets/img/figures/167.png) |

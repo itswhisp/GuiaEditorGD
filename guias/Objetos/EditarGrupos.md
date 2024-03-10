@@ -1,7 +1,7 @@
 ## Editar Grupos
 "Edit Group" is one of the most important buttons in the game. It is found on the right side of the editor when the object(s) you want to edit are selected. This menu is what enables you to change attributes of your objects through various options, as well as adding Group IDs to link to Triggers.
 
-![](https://guia.jorge603.xyz/assets/img/figures/58.png)
+![](https://guia.editorgd.xyz/assets/img/figures/58.png)
 *Figure 6.1: The "Edit Group" tab with default settings.*<br>
 
 ### Functionality
@@ -17,18 +17,18 @@ The options are used to set editor layer, assign Group IDs, change the Z positio
 
 Copy and paste settings from different objects using the "Copy" and "Paste" buttons in the top right. The "Extra" and "Extra2" categories have special options, and are covered below.
 
-![](https://guia.jorge603.xyz/assets/img/figures/59.png)
+![](https://guia.editorgd.xyz/assets/img/figures/59.png)
 *Figure 6.2: Tileset values deciding order.*<br>
 
 ### Using Groups
 Group IDs are essential for Trigger usage. You can add up to ten Group IDs to a specific object. To assign a Group ID to objects, enter the Group ID you want to add into the number field and click the "Add" button. The number will be added to the window below in gray, as seen in figure 6.3. Clicking the "Next Free" button inputs the lowest Group ID value that has not been used in the level yet
 
-![](https://guia.jorge603.xyz/assets/img/figures/60.png)
+![](https://guia.editorgd.xyz/assets/img/figures/60.png)
 *Figure 6.3: Adding a Group ID.*<br>
 
 To remove a Group ID, simply click the one you want to remove. If you have a single object selected, a new "P" button appears next to "Add". This is used to mark the object as Group Parent ID. After clicking the "P" button, the corresponding Group ID will show in pink instead of the normal gray, as seen in figure 6.4. You can use Group Parent IDs for different Triggers.
 
-![](https://guia.jorge603.xyz/assets/img/figures/61.png)
+![](https://guia.editorgd.xyz/assets/img/figures/61.png)
 *Figure 6.4: Assigning a Group Parent ID.*<br>
 
 ### Extra Options
@@ -51,7 +51,7 @@ Extra options are in the "Extra" and "Extra2" buttons on the right side of the m
 - **GripSlope:** By default, the player can not slide up steep slopes and will slide down instead. With this option enabled, the player has more grip on slopes so that they can slide up.
 - **NoGlow:** Disables the glow emitted from solid objects and Spikes, as seen in figure 6.5.
 
-![](https://guia.jorge603.xyz/assets/img/figures/62.png)
+![](https://guia.editorgd.xyz/assets/img/figures/62.png)
 *Figure 6.5: Two Monsters with "NoGlow" disabled and enabled respectively.*<br>
 
 - **ScaleStick:** By default, the player's X position will not change when standing on a scaling object. With this option enabled, the player's position moves the corresponding distance from the scale center.
@@ -60,7 +60,7 @@ Extra options are in the "Extra" and "Extra2" buttons on the right side of the m
 - **Single PTouch:** This option is used for Rotate Gameplay Triggers and Dual Mode. If one of the players touches the Trigger, only that one is affected.
 - **No Audio Scale:** Disables pulsing for both Orbs and Pulsing Objects. See the figure below.
 
-![](https://guia.jorge603.xyz/assets/img/figures/63.png)
+![](https://guia.editorgd.xyz/assets/img/figures/63.png)
 *Figure 6.6: Orbs with "No Audio Scale" off and on respectively.*<br>
 
 ### Special IDs

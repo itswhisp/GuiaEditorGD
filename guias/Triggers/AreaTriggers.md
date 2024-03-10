@@ -8,7 +8,7 @@ Area Triggers work by taking the center you provide, drawing a circle around the
 - **Offset Y:** Offsets the center position in the Y direction. The "+/-" is how off it can go. For example, "Offset" at 40 with "+/-" at 10 would offset the center between 3 and 5 blocks.
 - **Deadzone:** Divides the length by the value you set here and changes the transition between center and edge accordingly. For example, having a length of 40 and setting a "Deadzone" of 0.5 would do 0 to 100% between 0 and 20, and stay 100% from 20-40.
 
-![](https://guia.jorge603.xyz/assets/img/figures/88.png)
+![](https://guia.editorgd.xyz/assets/img/figures/88.png)
 *Figure 7.22: Example of how the "Deadzone" works.*<br>
 
 - **ModFront/ModBack:** Modify the front and back of your center position. The value you put here is multiplied with your center.
@@ -20,7 +20,7 @@ Area Triggers work by taking the center you provide, drawing a circle around the
 - **Priority:** If several Area Triggers of the same kind are active at once, the one with the higher priority will perform its action.
 - **Effect ID:** Specific ID that can be referenced later, for example in Edit Area Triggers.
 
-![](https://guia.jorge603.xyz/assets/img/figures/89.png)
+![](https://guia.editorgd.xyz/assets/img/figures/89.png)
 *Figure 7.23: Settings of Area Triggers.*<br>
 
 - **P1:** Player 1.
@@ -35,24 +35,24 @@ Area Triggers work by taking the center you provide, drawing a circle around the
 - **CR:** Right of the screen from the center.
 - **TR:** Top right of the screen.
 
-![](https://guia.jorge603.xyz/assets/img/figures/90.png)
+![](https://guia.editorgd.xyz/assets/img/figures/90.png)
 *Figure 7.24: Overview of center options.*<br>
 
 The buttons below the "Deadzone" option indicate what direction the length will be drawn. Here’s a table of all the variations and what their range looks like.
 
 *Table 7.1: Direction settings.*<br>
 
-| ![](https://guia.jorge603.xyz/assets/img/figures/91.png) | ![](https://guia.jorge603.xyz/assets/img/figures/92.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/91.png) | ![](https://guia.editorgd.xyz/assets/img/figures/92.png) |
 | -------------------------------------------------------- | -------------------------------------------------------- |
-| ![](https://guia.jorge603.xyz/assets/img/figures/93.png) | ![](https://guia.jorge603.xyz/assets/img/figures/94.png) |
-| ![](https://guia.jorge603.xyz/assets/img/figures/95.png) | ![](https://guia.jorge603.xyz/assets/img/figures/96.png) |
-| ![](https://guia.jorge603.xyz/assets/img/figures/97.png) | ![](https://guia.jorge603.xyz/assets/img/figures/98.png) |
-| ![](https://guia.jorge603.xyz/assets/img/figures/99.png) | ![](https://guia.jorge603.xyz/assets/img/figures/100.png) |
-| ![](https://guia.jorge603.xyz/assets/img/figures/101.png) | ![](https://guia.jorge603.xyz/assets/img/figures/102.png) |
-| ![](https://guia.jorge603.xyz/assets/img/figures/103.png) | ![](https://guia.jorge603.xyz/assets/img/figures/104.png) |
-| ![](https://guia.jorge603.xyz/assets/img/figures/105.png) | ![](https://guia.jorge603.xyz/assets/img/figures/106.png) |
-| ![](https://guia.jorge603.xyz/assets/img/figures/107.png) | ![](https://guia.jorge603.xyz/assets/img/figures/108.png) |
-| ![](https://guia.jorge603.xyz/assets/img/figures/109.png) | ![](https://guia.jorge603.xyz/assets/img/figures/110.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/93.png) | ![](https://guia.editorgd.xyz/assets/img/figures/94.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/95.png) | ![](https://guia.editorgd.xyz/assets/img/figures/96.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/97.png) | ![](https://guia.editorgd.xyz/assets/img/figures/98.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/99.png) | ![](https://guia.editorgd.xyz/assets/img/figures/100.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/101.png) | ![](https://guia.editorgd.xyz/assets/img/figures/102.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/103.png) | ![](https://guia.editorgd.xyz/assets/img/figures/104.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/105.png) | ![](https://guia.editorgd.xyz/assets/img/figures/106.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/107.png) | ![](https://guia.editorgd.xyz/assets/img/figures/108.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/109.png) | ![](https://guia.editorgd.xyz/assets/img/figures/110.png) |
 
 For Area Move, we have these unique settings:
 

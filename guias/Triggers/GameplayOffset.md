@@ -1,0 +1,2 @@
+## Gameplay Offset
+Offsets the player by 2.5 blocks to the right, putting them in the X-axis center of the screen (assuming no other camera modifications have been made). Note that the movement is always 2.5 blocks (or 75 steps) no matter what camera offset or zoom you have.

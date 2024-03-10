@@ -1,7 +1,6 @@
 ## Conceptos Basicos
 
 ### Getting Started
-
 First, you have to find your way to the editor. On the main menu, click the right button, and then click "Create" in the top left. This brings you to the screen in figure 1.1, which is your list of custom levels. Note that levels here are not public, but rather custom levels saved locally on your account. Public levels are accessed through the bottom left button. More on that later. To start a new level, do as the text says and click "New" in the bottom right.
 
 ![](https://guia.editorgd.xyz/assets/img/figures/1.png)
@@ -16,7 +15,6 @@ At the top, you can set a level name and an optional description. The button in 
 *Figure 1.3: The editor with the default settings.*<br>
 
 ### Level Settings
-
 A good place to start is the main level settings, which are accessed by clicking the gear button in the top right corner of the editor. This opens the window seen below.
 
 ![](https://guia.editorgd.xyz/assets/img/figures/4.png)
@@ -51,6 +49,7 @@ These settings decide the level's starting state. This means that they define wh
 - **Font:** There is normally an attempt counter found at the start of levels, and this option changes the font used for this. It also changes any other text objects found in the level. You cannot change this further into the level.
 - **Select Color:** At the top of the window, you can set colors for various parts of the level. BG, G, and MG set the colors for the art described earlier. (G2 and MG2 are secondary colors used for details.) Line is an outline for the Ground. Clicking "More" lets you change the starting settings for the custom Color Channels. These are used for other objects. Note that any colors can be changed at any time in a level.
 - **Select Song:** This is where you set what song to use. The various options and menus are handled in the next chapter.
+
 ### Placing Objects
 Back to the main editor screen, the main part you will interact with is the bottom section, seen in figure 1.7. To begin creating, have the "Build" button on the left selected (indicated by blue color). This is where all the different objects in the game are located. We will write "objects" in lower case to refer to objects in general, so any goes. Clicking on an object selects it for use, which lets you place it in your level. This is done by clicking at the desired position on the grid. While an object is selected, you can enable "Swipe" on the right side to place objects over the area you swipe (hold down and drag).
 

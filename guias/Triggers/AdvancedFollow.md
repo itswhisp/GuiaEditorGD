@@ -1,7 +1,7 @@
 ## Advanced Follow
 Advanced Follow Triggers are used to make objects move towards a target and make them follow its movement. They are by far one of the most complex Triggers in the game. We highly suggest you follow along on your own example when testing out the options.
 
-![](https://guia.jorge603.xyz/assets/img/figures/80.png)
+![](https://guia.editorgd.xyz/assets/img/figures/80.png)
 *Figure 7.14: The Advanced Follow Trigger.*<br>
 
 - **Target GID:** The Group ID of the objects that should go towards the Group ID set in "Follow GID".
@@ -24,7 +24,7 @@ On the second page you can choose between 3 different modes by using the three b
 
 The "+-" sliders on all options indicate variance. For example, if you input a "Delay" of 3 and enter 2 into the "+-" field, the "Delay" will randomly be chosen in a range of 2 below and above. As a result, you get 1 to 5 "Delay".
 
-![](https://guia.jorge603.xyz/assets/img/figures/81.png)
+![](https://guia.editorgd.xyz/assets/img/figures/81.png)
 *Figure 7.15: Mode 1.*<br>
 
 In the first mode, the objects will simply move towards the target.
@@ -36,7 +36,7 @@ In the first mode, the objects will simply move towards the target.
 
 In the second mode, the objects will also move towards the target. However, you have more options to customize the movement depending on how close the objects are to the target.
 
-![](https://guia.jorge603.xyz/assets/img/figures/82.png)
+![](https://guia.editorgd.xyz/assets/img/figures/82.png)
 *Figure 7.16: Mode 2.*<br>
 
 - **Delay:** Delay before the movement starts.
@@ -54,10 +54,10 @@ The three boxes on the right correspond to their respective options. They apply 
 
 In the third mode the objects will also move towards the target. However, you can also edit more attributes of the movement.
 
-![](https://guia.jorge603.xyz/assets/img/figures/83.png)
+![](https://guia.editorgd.xyz/assets/img/figures/83.png)
 *Figure 7.17: Mode 3.*<br>
 
-![](https://guia.jorge603.xyz/assets/img/figures/84.png)
+![](https://guia.editorgd.xyz/assets/img/figures/84.png)
 *Figure 7.18: Mode 3, second page.*<br>
 
 - **Delay:** Delay before the movement starts.
