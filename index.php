@@ -93,17 +93,17 @@ $categories = $conn->query("SELECT * FROM categorias");
             <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
             <?php foreach ($sections as $section): ?>
             <?php if ($section["has_img"] == 0): ?>
-            <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
+            <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
                 <?= $section["titulo"] ?>
             </a>
             <?php elseif ($section["has_img"] == 1): ?>
             <?php if ($section["has_multiple_img"] == 0): ?>
-            <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
+            <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
                 <img src="<?= $section["imagen_uri"] ?>">
                 <?= $section["titulo"] ?>
             </a>
             <?php elseif ($section["has_multiple_img"] == 1): ?>
-            <a class="gd-button" href="pagina.php#<?= $section["nombre_seccion"] ?>">
+            <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
                 <?php
                                 $imgs = $conn->query("SELECT * FROM imagenes WHERE id_seccion = {$section['id_seccion']}");
                                 foreach ($imgs as $img):
