@@ -129,7 +129,7 @@ table {
     border-width: 2.5vh;
     border-style: solid;
     background-color: #995533;
-    border-image: url(../assets/img/dialogbox.png) 10% round;
+    border-image: url(../img/dialogbox.png) 10% round;
 }
 
 th,
