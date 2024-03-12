@@ -134,8 +134,34 @@ function goBack() {
         }
     });
 
-    loadGuide();
-    window.addEventListener('hashchange', function () {
-        loadGuide();
+    //loadGuide();
+    //window.addEventListener('hashchange', function () {
+    //    loadGuide();
+    //});
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Aquí puedes ejecutar el código que necesitas cuando la página haya cargado completamente
+        document.getElementById('loading').classList.add('hidden');
+      });
+
+
+    var currentUrl = window.location.href;
+    fetch(currentUrl)
+    .then(function(response) {
+        // Manejar el código de respuesta HTTP
+        console.log("Código de respuesta HTTP:", response.status);
+
+        if(response.status == 404){
+            document.getElementById('loading').classList.add('hidden');
+            document.getElementById('error').classList.remove('hidden');
+        }
+
+    })
+    .then(function(data) {
+        // Manejar el cuerpo de la respuesta si es necesario
+    })
+    .catch(function(error) {
+        // Manejar errores de solicitud
+        console.error("Error al realizar la solicitud:", error);
     });
 //});
