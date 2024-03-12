@@ -6,20 +6,20 @@ function goBack() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     // Lista de las guias, si no se encuentra en esta lista, la pagina no cargara (Temporal)
     var guides = {
         // Flags, 1: No Traducida, 2: Contiene Errores, 3: Desactualizada
         'Introduccion': [
-            { name: 'Conceptos Basicos', path: 'https://raw.githubusercontent.com/ItsWhisp/GuiaEditorGD/main/guias/Introduccion/ConceptosBasicos.md', flag: 1 },
-            { name: 'Elegir una cancion', path: 'guias/Introduccion/ElegirCancion.md', flag: 1 },
+            { name: 'Conceptos Basicos', path: 'https://raw.githubusercontent.com/ItsWhisp/GuiaEditorGD/main/guias/Triggers/InvertColor.md', flag: 1 },
+            { name: 'Elegir una cancion', path: 'https://raw.githubusercontent.com/ItsWhisp/GuiaEditorGD/main/guias/Introduccion/ElegirCancion.mds', flag: 1 },
             { name: 'Menu de pausa', path: '/guias/Introduccion/MenuPausa.md', flag: 1 },
             { name: 'Publiicar tu nivel', path: '/guias/Introduccion/PublicarNivel.md', flag: 1 },
         ],
         'Objetos': [
             { name: 'Objetos del gameplay', path: 'guias/Objetos/ObjetosGameplay.md', flag: 1 },
             { name: 'Objetos Animados', path: 'guias/Objetos/ObjetosAnimados.md', flag: 1 },
-            // { name: 'Objetos Personalizados', path: '/guias/Objetos/ObjetosPersonalizados.md', flag: 1 },
+            { name: 'Objetos Personalizados', path: '/guias/Objetos/ObjetosPersonalizados.md', flag: 1 },
             { name: 'Items', path: 'guias/Objetos/Items.md', flag: 1 },
             { name: 'Editar Grupos', path: 'guias/Objetos/EditarGrupos.md', flag: 1 },
         ],
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
             { name: 'Area Stop', path: 'guias/Triggers/Stop.md', flag: 1 },
             { name: 'Change BG/G/MG', path: 'guias/Triggers/ChangeBG.md', flag: 1 },
         ],
-    };
+    }; 
 
     function generateNavbar() { // Genera la barra de navegacion dinamicamente
         var html = '<ul>';
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return html;
     }
 
-    function loadGuide() { // Cargar la guia de la URL
+    /*function loadGuide() { // Cargar la guia de la URL
         document.getElementById('error').classList.add('hidden');
         document.getElementById('loading').classList.remove('hidden');
 
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('loading').classList.add('hidden');
         document.getElementById('error').classList.remove('hidden');
     }
-
+**/
     // Atajos de teclado
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
@@ -138,4 +138,4 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('hashchange', function () {
         loadGuide();
     });
-});
+//});
