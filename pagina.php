@@ -5,18 +5,15 @@ require "lib/Parsedown.php";
 
 $guide = filter_input(INPUT_GET, 'g', FILTER_SANITIZE_STRING);
 
-if(empty($guide)){
-    http_response_code(404);
-    header ("Location: index.php");
+if(empty($guide)){ //Si en la URL no se agrega un dato valido
+    http_response_code(404); //Devuelve un codigo de error http 404 NOT FOUND
+    header ("Location: index.php"); //Regresa al usuario a la pagina principal
 }
 else{
 
 $stmt = $conn->prepare("SELECT * FROM secciones WHERE nombre_seccion = ?");
 $stmt->execute([$guide]);
 $seccion = $stmt->fetch();
-
-
-
 
 ?>
 
@@ -34,13 +31,13 @@ $seccion = $stmt->fetch();
 </head>
 
 <body>
-    <!-- <div class="overlay" id="loading">
-        <img src="assets/img/loading.png"> -->
+    <div class="overlay" id="loading">
+        <img src="assets/img/loading.png">
     </div>
     <div class="overlay hidden" id="error">
         <div class="dialogalt">
-            <span class="gold">Error</span>
-            <p>La guia no se encuentra disponible o la ID en la URL es invalida</p>
+            <span class="gold">Error 404</span>
+            <p>La guia no se encuentra disponible o el enlace es invalido</p>
             <img class="dialog-button" onclick="goBack()" src="assets/img/VolverAtras.png">
         </div>
     </div>
@@ -49,11 +46,15 @@ $seccion = $stmt->fetch();
         <span id="title"><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { echo "Error 404 - Guia no encontrada"; } ?></span>
     </div>
     <div class="container">
-        <div class="navbar unselectable" id="guideNavbar"></div>
+        <div class="navbar unselectable" id="guideNavbar">
+            
+        </div>
         <div class="content" id="guideContent">
         <?php
 
-        if (!empty($seccion)){
+        if (!empty($seccion)){ //Si la variable seccion no está vacia
+
+            //Inicia la carga del archivo markdown
 
             $url = $seccion["seccion_url"];
             
