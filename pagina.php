@@ -36,7 +36,7 @@ $seccion = $stmt->fetch();
     </div>
     <div class="overlay hidden" id="error">
         <div class="dialogalt">
-            <span class="gold">Error 404</span>
+            <span class="gold">Error</span>
             <p>La guia no se encuentra disponible o el enlace es invalido</p>
             <img class="dialog-button" onclick="goBack()" src="assets/img/VolverAtras.png">
         </div>
