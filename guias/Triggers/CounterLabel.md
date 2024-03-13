@@ -1,4 +1,4 @@
-Counter Label
+## Counter Label
 
 Displays Item IDs, Timers, or Points.
 
