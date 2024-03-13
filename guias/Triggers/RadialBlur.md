@@ -10,7 +10,7 @@ Blurs the screen radially, so drawing a circle around the center with a given ra
 
 | No Ref Channel | Ref Channel |
 | -------------------------------------------------------- | -------------------------------------------------------- |
-| ![](https://guia.jorge603.xyz/assets/img/figures/136.png) | ![](https://guia.jorge603.xyz/assets/img/figures/137.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/136.png) | ![](https://guia.editorgd.xyz/assets/img/figures/137.png) |
 | The red object has blur applied. As you can see, the blur color fades towards the Background Color, which looks weird on a yellow Background. | Here we set the yellow Color Channel as the "Ref Channel", which makes the blur fade towards yellow. |
 
 - **Screen OffX/Screen OffY:** Offsets the blur center. Negative numbers offset it to the left or bottom respectively, while positive numbers offset it to the right or up respectively.
@@ -23,4 +23,4 @@ Blurs the screen radially, so drawing a circle around the center with a given ra
 
 | Without EmptyOnly | With EmptyOnly |
 | -------------------------------------------------------- | -------------------------------------------------------- |
-| ![](https://guia.jorge603.xyz/assets/img/figures/136.png) | ![](https://guia.jorge603.xyz/assets/img/figures/137.png) |
+| ![](https://guia.editorgd.xyz/assets/img/figures/136.png) | ![](https://guia.editorgd.xyz/assets/img/figures/137.png) |
