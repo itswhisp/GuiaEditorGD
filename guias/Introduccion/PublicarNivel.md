@@ -85,4 +85,5 @@ Additionally, how much RobTop likes it results in various types of ratings. This
 One way to increase the chances of your level being rated is by requesting it to a Moderator. Moderators are players that can suggest high-quality levels to RobTop for a rating. They are indicated by a special "M" badge on their in-game profile.
 
 For more information about the Rating System: https://www.boomlings.com/GDRating
+
 For more information about the Leaderboards: https://www.boomlings.com/GDLeaderboards
