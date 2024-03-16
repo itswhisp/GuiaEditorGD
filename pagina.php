@@ -28,6 +28,8 @@
     <meta name="theme-color" content="#039dfc">
     <meta name="twitter:title" content="<?php echo 'Guia del Editor';?>">
     <meta name="twitter:description" content="<?php if (!empty($seccion)) { echo $seccion['titulo']; } else { echo "Enlace invalido"; } ?>">
+    <meta name="twitter:image" content="https://guia.editorgd.xyz/GuiaEditor.png">
+    <meta name="twitter:card" content="summary_large_image">
     <title><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { echo "Guia no encontrada"; } ?> - Guia del Editor</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
