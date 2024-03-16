@@ -16,6 +16,15 @@ $categories = $conn->query("SELECT * FROM categorias");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia del Editor</title>
+    <meta name="description" content="La guia del editor de Geometry Dash en español">
+
+    <meta name="twitter:title" content="Geometry Dash Español: Guia del Editor">
+    <meta name="twitter:description" content="Traduccion de la guia del editor de Geometry Dash al español">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/ItsWhisp/GuiaEditorGD/main/GuiaEditor.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="theme-color" content="#039dfc">
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/index.css">
@@ -84,41 +93,41 @@ $categories = $conn->query("SELECT * FROM categorias");
     <!-- Carga de categorias y secciones -->
 
     <?php if ($categories->rowCount() == 0): ?>
-    <?php echo "No hay contenido en la pagina"; ?>
+        <?php echo "No hay contenido en la pagina"; ?>
     <?php endif ?>
     <?php foreach ($categories as $category): ?>
-    <div class="section unselectable">
-        <span>
-            <?= $category["titulo"] ?>
-        </span>
-        <div class="section-links">
-            <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
-            <?php foreach ($sections as $section): ?>
-            <?php if ($section["has_img"] == 0): ?>
-            <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
-                <?= $section["titulo"] ?>
-            </a>
-            <?php elseif ($section["has_img"] == 1): ?>
-            <?php if ($section["has_multiple_img"] == 0): ?>
-            <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
-                <img src="<?= $section["imagen_uri"] ?>">
-                <?= $section["titulo"] ?>
-            </a>
-            <?php elseif ($section["has_multiple_img"] == 1): ?>
-            <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
-                <?php
+        <div class="section unselectable">
+            <span>
+                <?= $category["titulo"] ?>
+            </span>
+            <div class="section-links">
+                <?php $sections = $conn->query("SELECT * FROM secciones WHERE id_categoria = {$category['id_categoria']}"); ?>
+                <?php foreach ($sections as $section): ?>
+                    <?php if ($section["has_img"] == 0): ?>
+                        <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
+                            <?= $section["titulo"] ?>
+                        </a>
+                    <?php elseif ($section["has_img"] == 1): ?>
+                        <?php if ($section["has_multiple_img"] == 0): ?>
+                            <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
+                                <img src="<?= $section["imagen_uri"] ?>">
+                                <?= $section["titulo"] ?>
+                            </a>
+                        <?php elseif ($section["has_multiple_img"] == 1): ?>
+                            <a class="gd-button" href="pagina.php?g=<?= $section["nombre_seccion"] ?>">
+                                <?php
                                 $imgs = $conn->query("SELECT * FROM imagenes WHERE id_seccion = {$section['id_seccion']}");
                                 foreach ($imgs as $img):
                                     ?>
-                <img src="<?= $img["uri_img"] ?>">
+                                    <img src="<?= $img["uri_img"] ?>">
+                                <?php endforeach ?>
+                                <?= $section["titulo"] ?>
+                            </a>
+                        <?php endif ?>
+                    <?php endif ?>
                 <?php endforeach ?>
-                <?= $section["titulo"] ?>
-            </a>
-            <?php endif ?>
-            <?php endif ?>
-            <?php endforeach ?>
+            </div>
         </div>
-    </div>
     <?php endforeach ?>
 
     <script src="https://unpkg.com/@popperjs/core@2"></script>
