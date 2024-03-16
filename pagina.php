@@ -14,6 +14,8 @@
     $stmt->execute([$guide]); // Ejecuta de forma segura la consulta MySQL
     $seccion = $stmt->fetch(); // Obtiene los datos obtenidos de la consulta y los guarda en $seccion
 
+    # TO-DO: HACER UN EXPLOITPATCH PARA SANITIZAR AUN MEJOR LAS PETICIONES GET
+
 ?>
 
 
@@ -23,6 +25,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#039dfc">
+    <meta name="twitter:title" content="<?php echo 'Guia del Editor';?>">
+    <meta name="twitter:description" content="<?php if (!empty($seccion)) { echo $seccion['titulo']; } else { echo "Enlace invalido"; } ?>">
     <title><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { echo "Guia no encontrada"; } ?> - Guia del Editor</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -47,7 +52,15 @@
     <div class="container">
 
         <div class="navbar unselectable" id="guideNavbar">
+
             <?php
+
+                /**
+                 * CARGA DEL MENU DE NAVEGACION - AUN SIN TERMINAR
+                 * TO-DO: MEJORAR EL CODIGO Y OPTIMIZAR PARA EVITAR SOBRECARGAS
+                 * EN EL SERVIDOR Y CORREGIR ERRORES, DOCUMENTAR ESTO
+                 */
+
                 $categories = $conn->query("SELECT * FROM categorias");
 
                 $html = '<ul>';
