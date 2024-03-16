@@ -7,6 +7,8 @@ $categories = $conn->query("SELECT * FROM categorias");
 
 ?>
 
+<? # TO-DO: DOCUMENTAR ESTO?>
+
 <!DOCTYPE html>
 <html lang="es">
 
