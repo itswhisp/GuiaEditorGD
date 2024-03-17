@@ -60,6 +60,9 @@
         <div class="navbar unselectable" id="guideNavbar">
 
             <?php
+
+                # TO-DO: Añadir las "flags" a cada seccion
+        
                 if(!empty($seccion)){
                     $categories = $conn->query("SELECT * FROM categorias");
 
