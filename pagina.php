@@ -53,15 +53,15 @@
     </div>
     <div class="titlebar">
         <img class="back" onclick="goBack()" src="assets/img/left.png">
-        <span id="title"><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { http_response_code(404); echo "Error 404 - Guia no encontrada"; } ?></span>
+        <span id="title"><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { http_response_code(404); } ?></span>
     </div>
     <div class="container">
 
         <div class="navbar unselectable" id="guideNavbar">
 
             <?php
-
-                 $categories = $conn->query("SELECT * FROM categorias");
+                if(!empty($seccion)){
+                    $categories = $conn->query("SELECT * FROM categorias");
 
                  $html = '<ul>';
                  
@@ -109,6 +109,9 @@
                  $html .= '</ul>';
                  
                  echo $html;
+                } else {
+                    http_response_code(404);
+                }
 
             ?>
         </div>
@@ -129,7 +132,6 @@
         }
         else {
             http_response_code(404);
-            echo "Error 404 - Guia no encontrada";
             echo "<script>document.getElementById('loading').classList.add('hidden'); document.getElementById('error').classList.remove('hidden');</script>";
         }
 
