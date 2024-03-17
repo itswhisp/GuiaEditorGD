@@ -31,10 +31,10 @@
     <!-- METADATOS DE LA PAGINA  -->
     <meta name="theme-color" content="#039dfc"> <? # METADATO COLOR (DISCORD) ?>
     <meta name="twitter:title" content="<?php echo 'Guia del Editor';?>"> <? # METADATO TITULO ?>
-    <meta name="twitter:description" content="<?php if (!empty($seccion)) { echo $seccion['titulo']; } else { echo "Enlace invalido"; } ?>"> <? # METADATO DINAMICO DESCRIPCION ?>
+    <meta name="twitter:description" content="<?php if (!empty($seccion)) { echo $seccion['titulo']; } else { http_response_code(404); echo "Enlace invalido"; } ?>"> <? # METADATO DINAMICO DESCRIPCION ?>
     <meta name="twitter:image" content="https://guia.editorgd.xyz/GuiaEditor.png"> <? # METADATO IMAGEN ?>
     <meta name="twitter:card" content="summary_large_image">
-    <title><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { echo "Guia no encontrada"; } ?> - Guia del Editor</title> <? # TITULO DINAMICO DE LA PAGINA ?>
+    <title><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { http_response_code(404); echo "Guia no encontrada"; } ?> - Guia del Editor</title> <? # TITULO DINAMICO DE LA PAGINA ?>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/guia.css">
@@ -53,7 +53,7 @@
     </div>
     <div class="titlebar">
         <img class="back" onclick="goBack()" src="assets/img/left.png">
-        <span id="title"><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { echo "Error 404 - Guia no encontrada"; } ?></span>
+        <span id="title"><?php if (!empty($seccion)) { echo $seccion["titulo"]; } else { http_response_code(404); echo "Error 404 - Guia no encontrada"; } ?></span>
     </div>
     <div class="container">
 
@@ -61,39 +61,55 @@
 
             <?php
 
-                /**
-                 * ALGORITMO DE CARGA DEL MENU DE NAVEGACION - AUN SIN TERMINAR
-                 * TO-DO: MEJORAR EL CODIGO Y OPTIMIZAR PARA EVITAR SOBRECARGAS
-                 * EN EL SERVIDOR Y CORREGIR ERRORES
-                 */
+                 $categories = $conn->query("SELECT * FROM categorias");
 
-                $categories = $conn->query("SELECT * FROM categorias");
-
-                $html = '<ul>';
-                while ($row = $categories->fetch(PDO::FETCH_ASSOC)) {
-                $section = $row['titulo'];
-                $id = $row['id_categoria'];
-
-                $openSection = false;
-
-                $html .= "<li><details"  . ($openSection ? " open" : "") . "><summary>{$section}</summary><ul>";
-                $html .= "<ul>";
-                    $guides = $conn->query("SELECT * FROM secciones");
-
-                    foreach ($guides as $guide){
-                        if($row['id_categoria'] == $guide['id_categoria']){
-
+                 $html = '<ul>';
+                 
+                 foreach ($categories as $category){
+                 
+                     $openSection = false;
+                 
+                     if ($category['id_categoria'] == $seccion['id_categoria']){
+                         $openSection = true;
+                     }
+                 
+                     $html .= "<li><details" . ($openSection ? " open" : "") . "><summary>{$category['titulo']}</summary>";
+                     $html .= "<ul>";
+                 
+                     $guias = $conn->query("SELECT * FROM secciones");
+                 
+                     foreach ($guias as $guia){
+                 
+                         if ($category['id_categoria'] == $guia['id_categoria']){
+                            
                             $html .= "<li>";
-                            $html .= "<a class=not-translated href=pagina.php?g={$guide['nombre_seccion']}>{$guide['titulo']}</a>";
-                            $html .= "</li>";
-                        }
-                    }
-                $html .= "</ul>";
-                $html .= '</ul></details></li>';
-                }
-                    $html .= '</ul>';
 
-                echo $html;
+                            if($guia['nombre_seccion'] == $guide){
+
+                                
+                                $html .= "<strong class='not-translated'>{$guia['titulo']}</strong>";
+                                $html .= "</li>";
+
+                                
+                            } else {
+
+                                $html .= "<a class='not-translated' href='pagina.php?g={$guia['nombre_seccion']}'>{$guia['titulo']}</a>";
+                                $html .= "</li>";
+
+                            }
+
+                 
+                         }
+                     }
+                 
+                     $html .= '</ul></details></li>';
+                 
+                 }
+                 
+                 $html .= '</ul>';
+                 
+                 echo $html;
+
             ?>
         </div>
 
