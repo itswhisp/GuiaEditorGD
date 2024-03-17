@@ -22,7 +22,6 @@ $categories = $conn->query("SELECT * FROM categorias");
     <meta name="twitter:description" content="Traduccion de la guia del editor de Geometry Dash al español">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/ItsWhisp/GuiaEditorGD/main/GuiaEditor.png">
     <meta name="twitter:card" content="summary_large_image">
-
     <meta name="theme-color" content="#039dfc">
 
     <link rel="icon" type="image/x-icon" href="favicon.ico">
