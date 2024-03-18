@@ -61,7 +61,7 @@
 
             <?php
 
-                # TO-DO: Añadir las "flags" a cada seccion
+                # ALGORITMO DE CARGA DEL MENU DE NAVEGACION
         
                 if(!empty($seccion)){
                     $categories = $conn->query("SELECT * FROM categorias");
@@ -89,15 +89,48 @@
 
                             if($guia['nombre_seccion'] == $guide){
 
+                                switch($guia['flag']){
+                                    case '1':
+                                        $html .= "<strong class='not-translated'>{$guia['titulo']}</strong>"; # not-translated
+                                        $html .= "</li>";
+                                    break;
+                                    case '2':
+                                        $html .= "<strong class='contains-mistakes'>{$guia['titulo']}</strong>"; # contains-mistakes
+                                        $html .= "</li>";
+                                    break;
+                                    case '3':
+                                        $html .= "<strong class='outdated'>{$guia['titulo']}</strong>"; # outdated
+                                        $html .= "</li>";
+                                    break;
+                                    default:
+                                        $html .= "<strong>{$guia['titulo']}</strong>"; # default
+                                        $html .= "</li>";
+                                    break;
+
+                                }
                                 
-                                $html .= "<strong class='not-translated'>{$guia['titulo']}</strong>";
-                                $html .= "</li>";
 
                                 
                             } else {
 
-                                $html .= "<a class='not-translated' href='pagina.php?g={$guia['nombre_seccion']}'>{$guia['titulo']}</a>";
-                                $html .= "</li>";
+                                switch($guia['flag']){
+                                    case '1':
+                                        $html .= "<a class='not-translated' href='pagina.php?g={$guia['nombre_seccion']}'>{$guia['titulo']}</a>"; # not-translated (1)
+                                        $html .= "</li>";
+                                    break;
+                                    case '2':
+                                        $html .= "<a class='contains-mistakes' href='pagina.php?g={$guia['nombre_seccion']}'>{$guia['titulo']}</a>"; # contains-mistakes (2)
+                                        $html .= "</li>";
+                                    break;
+                                    case '3':
+                                        $html .= "<a class='outdated' href='pagina.php?g={$guia['nombre_seccion']}'>{$guia['titulo']}</a>"; # outdated (3)
+                                        $html .= "</li>";
+                                    break;
+                                    default:
+                                        $html .= "<a href='pagina.php?g={$guia['nombre_seccion']}'>{$guia['titulo']}</a>"; # default (0)
+                                        $html .= "</li>";
+                                    break;
+                                    }
 
                             }
 
