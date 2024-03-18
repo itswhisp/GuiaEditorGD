@@ -1,6 +1,5 @@
-<!-- CONEXION A LA BASE DE DATOS, CARGA DE LIBRERIAS Y CONSULTA A LA BASE DE DATOS PARA MOSTRAR CONTENIDO -->
-
 <?php
+    # Conexion a la base de datos y carga de libreria Parsedown
 
     require "config/connection.php";
     require "lib/Parsedown.php";
@@ -89,27 +88,27 @@
 
                             if($guia['nombre_seccion'] == $guide){
 
+                                # 'Flags' de las secciones
+
                                 switch($guia['flag']){
                                     case '1':
-                                        $html .= "<strong class='not-translated'>{$guia['titulo']}</strong>"; # not-translated
+                                        $html .= "<strong class='not-translated'>{$guia['titulo']}</strong>"; # not-translated (1)
                                         $html .= "</li>";
                                     break;
                                     case '2':
-                                        $html .= "<strong class='contains-mistakes'>{$guia['titulo']}</strong>"; # contains-mistakes
+                                        $html .= "<strong class='contains-mistakes'>{$guia['titulo']}</strong>"; # contains-mistakes (2)
                                         $html .= "</li>";
                                     break;
                                     case '3':
-                                        $html .= "<strong class='outdated'>{$guia['titulo']}</strong>"; # outdated
+                                        $html .= "<strong class='outdated'>{$guia['titulo']}</strong>"; # outdated (3)
                                         $html .= "</li>";
                                     break;
                                     default:
-                                        $html .= "<strong>{$guia['titulo']}</strong>"; # default
+                                        $html .= "<strong>{$guia['titulo']}</strong>"; # default (0)
                                         $html .= "</li>";
                                     break;
 
                                 }
-                                
-
                                 
                             } else {
 
@@ -134,7 +133,6 @@
 
                             }
 
-                 
                          }
                      }
                  
