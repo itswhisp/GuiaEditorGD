@@ -74,8 +74,8 @@ $categories = $conn->query("SELECT * FROM categorias");
     <span class="unselectable">Guia del editor</span>
     <span class="gold small unselectable">(En Construccion)</span>
     <div class="section menu unselectable">
-        <a data-tippy-content="Servidor de Discord de Geometry Dash Español" target="_blank"
-            class="menu-button disabled">
+        <a data-tippy-content="Servidor de Discord de Geometry Dash Español" href="https://discord.gg/4Pt9HrjYwx"
+            target="_blank" class="menu-button">
             <img src="assets/img/buttons/discord.png">
         </a>
         <a data-tippy-content="Guia oficial del editor (En Ingles)"
