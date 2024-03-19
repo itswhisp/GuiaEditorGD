@@ -1,7 +1,7 @@
 ## Pulse
 This Trigger is normally used to change the color of a Color Channel or Group ID temporarily. The interface and various options are as follows:
 
-![](https://guia.jorge603.xyz/assets/img/figures/69.png)
+![](https://guia.editorgd.xyz/assets/img/figures/69.png)
 *Figure 7.5: The Pulse Trigger.*<br>
 
 - **Channel:** With "Channel", you pulse an entire Color Channel. Clicking the "+" button allows you to select a special color. This includes for example the Background, Ground, Middleground, and Player Colors.
