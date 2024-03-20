@@ -57,7 +57,7 @@
             <img class="arrow right" src="assets/img/right.png">
         </div>
     </div>
-    <a href="https://github.com/ItsWhisp/GuiaEditorGD" target="_blank" class="github unselectable"><img
+    <a href="github/" target="_blank" class="github unselectable"><img
             src="assets/img/github.png"></a>
     <img class="logo unselectable" src="assets/img/logo.png">
     <span class="unselectable">Guia del editor</span>
