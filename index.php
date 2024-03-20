@@ -61,7 +61,7 @@
             src="assets/img/github.png"></a>
     <img class="logo unselectable" src="assets/img/logo.png">
     <span class="unselectable">Guia del editor</span>
-    <span class="gold small unselectable">(En Construccion)</span>
+    <span class="gold small unselectable">(En proceso de traduccion)</span>
     <div class="section menu unselectable">
         <a data-tippy-content="Servidor de Discord de Geometry Dash Español" href="https://discord.gg/4Pt9HrjYwx"
             target="_blank" class="menu-button">
