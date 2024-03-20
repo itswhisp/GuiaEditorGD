@@ -1,36 +1,25 @@
 <?php
-
-require "config/connection.php";
-
-$categories = $conn->query("SELECT * FROM categorias");
-
-
+    # CONEXION A LA BASE DE DATOS
+    require "config/connection.php";
+    $categories = $conn->query("SELECT * FROM categorias");
 ?>
-
-<? # TO-DO: DOCUMENTAR ESTO?>
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia del Editor</title>
     <meta name="description" content="La guia del editor de Geometry Dash en español">
-
     <meta name="twitter:title" content="Geometry Dash Español: Guia del Editor">
     <meta name="twitter:description" content="Traduccion de la guia del editor de Geometry Dash al español">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/ItsWhisp/GuiaEditorGD/main/GuiaEditor.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#039dfc">
-
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
-
 <body>
-
     <!-- Creditos -->
     <div class="overlay hidden" id="credits">
         <div class="dialog">
@@ -63,7 +52,7 @@ $categories = $conn->query("SELECT * FROM categorias");
                     </div>
                 </div>
                 <p class="disclaimer unselectable">"Geometry Dash", sus texturas y demás archivos utilizados dentro
-                    de este sitio web son propiedad de RobTop Games.</p>
+                    de este sitio web son propiedad de RobTop Games. <br>Guia del editor v1.0</p>
             </div>
             <img class="arrow right" src="assets/img/right.png">
         </div>
@@ -87,10 +76,8 @@ $categories = $conn->query("SELECT * FROM categorias");
             <img src="assets/img/buttons/creditos.png">
         </a>
     </div>
-
-
     <!-- Carga de categorias y secciones -->
-
+    <!-- TO-DO: Documentar este algoritmo -->
     <?php if ($categories->rowCount() == 0): ?>
         <?php echo "No hay contenido en la pagina"; ?>
     <?php endif ?>
@@ -128,10 +115,8 @@ $categories = $conn->query("SELECT * FROM categorias");
             </div>
         </div>
     <?php endforeach ?>
-
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="assets/js/index.js"></script>
 </body>
-
 </html>
