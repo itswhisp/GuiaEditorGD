@@ -1,7 +1,8 @@
 <?php
-    # CONEXION A LA BASE DE DATOS
+    # CONEXION A LA BASE DE DATOS Y CONFIGURACIONES
     require "config/connection.php";
-    $categories = $conn->query("SELECT * FROM categorias");
+    require "config/config.php";
+        $categories = $conn->query("SELECT * FROM categorias");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -76,6 +77,7 @@
             <img src="assets/img/buttons/creditos.png">
         </a>
     </div>
+
     <!-- Carga de categorias y secciones -->
     <!-- TO-DO: Documentar este algoritmo -->
     <?php if ($categories->rowCount() == 0): ?>

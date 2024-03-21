@@ -1,6 +1,7 @@
 <?php
     # Conexion a la base de datos y carga de libreria Parsedown
     require "config/connection.php";
+    require "config/config.php";
     require "lib/Parsedown.php";
     $guide = filter_input(INPUT_GET, 'g', FILTER_SANITIZE_STRING); // Obtencion del parametro $_GET de la URL sanitizado
     if(empty($guide)){ # Condicional: "Si en la URL no se agrega un dato valido"
@@ -10,6 +11,7 @@
     $stmt = $conn->prepare("SELECT * FROM secciones WHERE nombre_seccion = ?"); # Obtiene el valor $_GET de "g" para realizar una consulta a la DB
     $stmt->execute([$guide]); # Ejecuta de forma segura la consulta MySQL
     $seccion = $stmt->fetch(); # Obtiene los datos obtenidos de la consulta y los guarda en $seccion
+    
 ?>
 <!-- ESTRUCTURA DE LA PAGINA + PHP -->
 <!DOCTYPE html>
