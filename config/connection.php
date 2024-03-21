@@ -9,13 +9,16 @@
  * MYSQL EN EL ARCHIVO LOCAL DE SU SERVIDOR MYSQL
  */
 
+require "config.php";
+
 $host = "localhost";
 $database = "guia";
 $user = "root";
 $password = "";
 
-try {
-  $conn = new PDO("mysql:host=$host;dbname=$database", $user, $password);
-} catch (PDOException $e) {
-  die("PDO Connection Error: " . $e->getMessage());
-}
+  try {
+    $conn = new PDO("mysql:host=$host;dbname=$database", $user, $password);
+  } catch (PDOException $e) {
+    http_response_code(500);
+    die("PDO Connection Error: " . $e->getMessage());
+  }
