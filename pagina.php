@@ -84,6 +84,28 @@ if (empty($guide)) { # Condicional: "Si en la URL no se agrega un dato valido"
                 correcta</p> -->
 
             <?php
+                switch($seccion['flag']){
+                    case '1':
+                        echo '<h4>No Traducido</h4>
+                        <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina aun no ha sido traducida, o esta traducida
+                        parcialmente</p>';
+                        break;
+                    case '2':
+                        echo '<h4>Contiene Errores</h4>
+                        <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina puede no estar traducida correctamente, o puede
+                            contener errores</p>';
+                        break;
+                    case '3':
+                        echo '<h4>Desactualizada</h4>
+                        <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina esta desactualizada y puede no ser del todo
+                            correcta</p>';
+                        break;
+                    default:
+                        # GUIA TRADUCIDA, TO-DO: AÑADIR ALGO EN CASO DE QUE SE MARQUE COMO TRADUCIDA LA GUIA EN LA DB
+                        break;
+                }
+
+            
                 # ALGORITMO DE CARGA DEL MENU DE NAVEGACION
                 # TO-DO: Documentar este algoritmo :el_bromas:
                 if (!empty($seccion)) {
