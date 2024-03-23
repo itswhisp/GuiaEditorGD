@@ -73,29 +73,22 @@ if (empty($guide)) { # Condicional: "Si en la URL no se agrega un dato valido"
     <div class="container">
         <div class="navbar unselectable" id="guideNavbar">
 
-            <!-- <h4>No Traducido</h4>
-            <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina aun no ha sido traducida, o esta traducida
-                parcialmente</p>
-            <h4>Contiene Errores</h4>
-            <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina puede no estar traducida correctamente, o puede
-                contener errores</p>
-            <h4>Desactualizada</h4>
-            <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina esta desactualizada y puede no ser del todo
-                correcta</p> -->
-
             <?php
-                switch($seccion['flag']){
-                    case '1':
+
+            # DETERMINA SI LA GUIA ESTÁ TRADUCIDA O NO DE ACUERDO A LA "FLAG" DE CADA GUIA
+            
+                switch($seccion['flag']){ 
+                    case '1': # NO TRADUCIDO
                         echo '<h4>No Traducido</h4>
                         <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina aun no ha sido traducida, o esta traducida
                         parcialmente</p>';
                         break;
-                    case '2':
+                    case '2': # CONTIENE ERRORES
                         echo '<h4>Contiene Errores</h4>
                         <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina puede no estar traducida correctamente, o puede
                             contener errores</p>';
                         break;
-                    case '3':
+                    case '3': # DESACTUALIZADO
                         echo '<h4>Desactualizada</h4>
                         <p style="font-size: 0.6em; margin-bottom: 6px;">Esta pagina esta desactualizada y puede no ser del todo
                             correcta</p>';
