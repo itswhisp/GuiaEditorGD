@@ -35,7 +35,9 @@ body {
     position: relative;
     align-items: center;
     flex-direction: row;
+    pointer-events: none;
     justify-content: center;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .back {
@@ -44,6 +46,7 @@ body {
     height: 100%;
     cursor: pointer;
     position: absolute;
+    pointer-events: initial;
 }
 
 .back:active {
@@ -183,12 +186,20 @@ td:nth-child(3n) {
 /* --------------------------------- Navbar --------------------------------- */
 
 .navbar {
+    gap: 6px;
     width: 30%;
     padding: 24px;
+    display: flex;
     overflow: scroll;
     border-radius: 18px;
     box-sizing: border-box;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar h4 {
+    font-size: 0.9em;
+    -webkit-text-stroke-width: 0.12vh;
 }
 
 .navbar li {

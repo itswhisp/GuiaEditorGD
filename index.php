@@ -1,11 +1,12 @@
 <?php
-    # CONEXION A LA BASE DE DATOS Y CONFIGURACIONES
-    require "config/connection.php";
-    require "config/config.php";
-        $categories = $conn->query("SELECT * FROM categorias");
+# CONEXION A LA BASE DE DATOS Y CONFIGURACIONES
+require "config/connection.php";
+require "config/config.php";
+$categories = $conn->query("SELECT * FROM categorias");
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
+
 <body>
     <!-- Creditos -->
     <div class="overlay hidden" id="credits">
@@ -37,7 +39,7 @@
                 <span>Creditos</span>
                 <img class="icon" style="height: 60px; padding: 10px 0;" src="assets/img/credits/jorge603.gif">
                 <a href="https://youtube.com/@Jorge603" target="_blank" class="gold">Jorge603</a>
-                <span class="small">Hosting, dominio y funciones</span>
+                <span class="small">Hosting, dominio y backend</span>
             </div>
             <div class="credits-page 03 hidden">
                 <span style="color: rgb(0, 255, 0);">Agradecimientos Especiales</span>
@@ -53,16 +55,15 @@
                     </div>
                 </div>
                 <p class="disclaimer unselectable">"Geometry Dash", sus texturas y demás archivos utilizados dentro
-                    de este sitio web son propiedad de RobTop Games. <br>Guia del editor v1.0</p>
+                    de este sitio web son propiedad de RobTop Games.</p>
             </div>
             <img class="arrow right" src="assets/img/right.png">
         </div>
     </div>
-    <a href="github/" target="_blank" class="github unselectable"><img
-            src="assets/img/github.png"></a>
+    <a href="github/" target="_blank" class="github unselectable"><img src="assets/img/github.png"></a>
     <img class="logo unselectable" src="assets/img/logo.png">
     <span class="unselectable">Guia del editor</span>
-    <span class="gold small unselectable">(En proceso de traduccion)</span>
+    <span class="gold small unselectable">(Trabajo en progreso)</span>
     <div class="section menu unselectable">
         <a data-tippy-content="Servidor de Discord de Geometry Dash Español" href="https://discord.gg/4Pt9HrjYwx"
             target="_blank" class="menu-button">
@@ -117,8 +118,10 @@
             </div>
         </div>
     <?php endforeach ?>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
-    <script src="assets/js/index.js"></script>
+    <p class="info" style="margin-top: 24px">Guia del Editor – v1.0.0</span>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <script src="assets/js/index.js"></script>
 </body>
+
 </html>
