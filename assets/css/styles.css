@@ -11,24 +11,29 @@ body {
     background: linear-gradient(#0065FD, #002E73);
     background-color: #002E73;
     background-attachment: fixed;
+
+    @media (prefers-color-scheme: dark) {
+        background: linear-gradient(#313531, #101410);
+        background-color: #101410;
+    }
 }
 
 /* ----------------------------- Estilos Basicos ---------------------------- */
+
+::-webkit-scrollbar {
+    display: none;
+}
 
 * {
     margin: 0;
     padding: 0;
     color: #fff;
     -webkit-user-drag: none;
-    -webkit-text-stroke-width: 0.24vh;
     -webkit-text-stroke-color: black;
     -webkit-tap-highlight-color: transparent;
-    font-family: 'Pusab', Arial, Aller, sans-serif;
+    -webkit-text-stroke-width: 0.07em;
     text-shadow: 0.375vh 0.375vh 0vh rgba(0, 0, 0, 0.3);
-
-    @media (max-width: 700px) {
-        -webkit-text-stroke-width: 0.3vw;
-    }
+    font-family: 'Pusab', Arial, Aller, sans-serif;
 
     @media (max-width: 700px) {
         text-shadow: 0.22vh 0.22vh 0vh rgba(0, 0, 0, 0.3);
@@ -42,10 +47,6 @@ body {
     font-size: calc(21px + 0.6vw);
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 a {
     cursor: pointer;
     text-decoration: none;
@@ -57,11 +58,22 @@ a.gold:active {
 }
 
 p {
-    font-size: 0.75rem;
     text-shadow: none;
     word-break: break-word;
     -webkit-text-stroke-width: 0;
     font-family: Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    -webkit-text-stroke-width: 0.035em;
+}
+
+h3 {
+    -webkit-text-stroke-width: 0.04em;
+}
+
+h4 {
+    -webkit-text-stroke-width: 0.045em;
 }
 
 /* ------------------------------- Animaciones ------------------------------ */
@@ -201,20 +213,10 @@ p {
 
 .small {
     font-size: 0.8em;
-    -webkit-text-stroke-width: 0.2vh;
-
-    @media (max-width: 700px) {
-        -webkit-text-stroke-width: 0.24vw;
-    }
 }
 
 .smaller {
     font-size: 0.6em;
-    -webkit-text-stroke-width: 0.15vh;
-
-    @media (max-width: 700px) {
-        -webkit-text-stroke-width: 0.24vw;
-    }
 }
 
 /* -------------------------------- Tippy.js -------------------------------- */

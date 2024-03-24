@@ -6,11 +6,11 @@ function goBack() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('loading').classList.add('hidden');
     document.querySelector('#guideContent').addEventListener('scroll', function () {
-        // Desvanecer titulo en moviles al scrollear
 
+        // Desvanecer titulo en moviles al scrollear
         if (window.innerWidth <= 700) {
             if (this.scrollTop > this.lastScrollTop) { // Scroll hacia aabjo
                 document.querySelector('.titlebar').style.opacity = '0.2';
@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         this.lastScrollTop = this.scrollTop;
     });
+});
+
+window.addEventListener('resize', function () {
+    document.querySelector('.titlebar').style.opacity = '1';
 });
 
 // Atajos de teclado

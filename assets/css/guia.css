@@ -95,7 +95,6 @@ body {
 .content h3 {
     margin: -10px 0;
     overflow-wrap: anywhere;
-    -webkit-text-stroke-width: 0.16vh;
 }
 
 .content p,
@@ -127,9 +126,11 @@ ul li {
 
 table {
     padding: 0;
+    width: 100%;
     border-spacing: 0;
     border-radius: 3vh;
     border-width: 2.5vh;
+    table-layout: fixed;
     border-style: solid;
     background-color: #995533;
     border-image: url(../img/dialogbox.png) 10% round;
@@ -162,19 +163,6 @@ table tr:last-child td {
     border-bottom: 0;
 }
 
-td:nth-child(odd) {
-    width: 10vw;
-}
-
-td:nth-child(even) {
-    width: 30vw;
-}
-
-td:nth-child(3n) {
-    width: 40vw;
-    padding: 8px 0;
-}
-
 .container table * {
     font-size: 18px;
     text-shadow: none;
@@ -195,11 +183,6 @@ td:nth-child(3n) {
     box-sizing: border-box;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.3);
-}
-
-.navbar h4 {
-    font-size: 0.9em;
-    -webkit-text-stroke-width: 0.12vh;
 }
 
 .navbar li {

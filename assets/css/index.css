@@ -32,6 +32,15 @@ body {
     max-width: 80%;
 }
 
+.info,
+.credits-page .disclaimer {
+    opacity: 0.7;
+    color: #000;
+    font-size: 0.6em;
+    text-wrap: balance;
+    max-width: 600px;
+}
+
 /* ---------------------------- Botones del Menu ---------------------------- */
 
 .section.menu {
@@ -99,19 +108,32 @@ body {
     overflow: scroll;
 }
 
-.thanks-container {
-    display: grid;
-    margin: 14px 0 20px 0;
-    grid-gap: 15px;
+.grid-container {
+    gap: 18px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    margin: 14px 0 20px 0;
+    justify-content: center;
 }
 
-.thanks-item {
+.grid-item {
     display: flex;
     align-items: center;
     box-sizing: border-box;
     flex-direction: column;
+    width: calc(100% * (1/4) - 10px - 1px);
+}
+
+@media (max-width: 700px) {
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .grid-item .icon {
+        display: none;
+    }
 }
 
 #credits .dialog .close {
@@ -125,7 +147,8 @@ body {
 
 #credits .dialog .icon {
     width: auto;
-    height: 100px;
+    height: 60px;
+    padding: 10px 0;
 }
 
 #credits .dialog .arrow {
@@ -179,17 +202,4 @@ body {
         right: 45px;
         translate: 0;
     }
-
-    .thanks-container {
-        grid-template-columns: 2fr;
-    }
-}
-
-.credits-page .disclaimer,
-.info {
-    opacity: 0.7;
-    color: #000;
-    font-size: 0.6em;
-    text-wrap: balance;
-    max-width: 600px;
 }
