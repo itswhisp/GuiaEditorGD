@@ -7,7 +7,6 @@ function goBack() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('loading').classList.add('hidden');
     document.querySelector('#guideContent').addEventListener('scroll', function () {
 
         // Desvanecer titulo en moviles al scrollear
