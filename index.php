@@ -44,14 +44,29 @@ $categories = $conn->query("SELECT * FROM categorias");
             <div class="credits-page 03 hidden">
                 <span style="color: rgb(0, 255, 0);">Agradecimientos Especiales</span>
                 <div class="grid-container">
-                    <div class="grid-item">
+                    <!-- <div class="grid-item">
                         <img class="icon" src="assets/img/credits/colon.png">
                         <a href="https://twitter.com/TheRealGDColon" target="_blank" class="gold">Colon</a>
                     </div>
                     <div class="grid-item">
                         <img class="icon" src="assets/img/credits/spacedream.png">
                         <a href="https://twitter.com/space_sd" target="_blank" class="gold">SpaceDream</a>
-                    </div>
+                    </div> -->
+
+                        <?php
+
+                          $colaboradores = $conn->query("SELECT * FROM colaboradores");
+
+                          foreach ($colaboradores as $colaborador) {
+
+                            echo "<div class='grid-item'>
+                            <img class='icon' src={$colaborador["icono"]}>
+                            <a href='{$colaborador["enlace"]}' target='_blank' class='gold'>{$colaborador['nombre']}</a>
+                            </div>";
+                            
+                          }
+
+                        ?>
                 </div>
                 <p class="disclaimer unselectable">"Geometry Dash", sus texturas y demás archivos utilizados dentro
                     de este sitio web son propiedad de RobTop Games.</p>
