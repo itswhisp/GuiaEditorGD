@@ -41,6 +41,13 @@ body {
     max-width: 600px;
 }
 
+@media (prefers-color-scheme: dark) {
+    .info {
+        color: #fff;
+        opacity: 0.3;
+    }
+}
+
 /* ---------------------------- Botones del Menu ---------------------------- */
 
 .section.menu {
