@@ -47,6 +47,9 @@ if (empty($guide)) { # Condicional: "Si en la URL no se agrega un dato valido"
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/guia.css">
+    <!-- IMPORTANTE: DEJAR ESTO AQUI PARA QUE EL AJAX FUNCIONE CORRECTAMENTE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -170,23 +173,32 @@ if (empty($guide)) { # Condicional: "Si en la URL no se agrega un dato valido"
                 ?>
         </div>
         <div class="content" id="guideContent">
-            <?php
-                if (!empty($seccion)) { # Condicional: "Si la variable $seccion no está vacia"
-                    # Inicia la carga del archivo markdown
-                    $url = $seccion["seccion_url"];
-                    $contenido = file_get_contents($url);
-                    $Parsedown = new Parsedown();
-                    echo Parsedown::instance()
-                        ->setBreaksEnabled(true) # Activa saltos de linea automaticos
-                        ->text($contenido); # Comienza la carga del archivo.md obtenido de la base de datos
-                } else {
-                    http_response_code(404);
-                    echo "<script>document.getElementById('loading').classList.add('hidden'); document.getElementById('error').classList.remove('hidden');</script>";
-                }
-} # Fin del else de la condicional del inicio del documento (linea 9) ?>
+
+                <script>
+
+                    var guide = "<?php echo $guide; ?>"
+
+                    $(document).ready(function(){
+                        $.ajax({
+                            url: 'Controller/GuideController.php',
+                            type: 'GET',
+                            data: {g: guide},
+                                success: function(response){
+                                    $('#guideContent').append(response);
+                                    document.getElementById('loading').classList.add('hidden');
+                                },
+                                error: function(xhr, status, error){
+                                    document.getElementById('loading').classList.add('hidden'); document.getElementById('error').classList.remove('hidden');
+                                }
+                        });
+                    });
+
+                </script>
+
+
+<?php } # Fin del else de la condicional del inicio del documento (linea 9) ?>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
     <script src="assets/js/guia.js"></script>
 </body>
 
