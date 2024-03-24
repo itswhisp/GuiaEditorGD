@@ -44,15 +44,6 @@ $categories = $conn->query("SELECT * FROM categorias");
             <div class="credits-page 03 hidden">
                 <span style="color: rgb(0, 255, 0);">Agradecimientos Especiales</span>
                 <div class="grid-container">
-                    <!-- <div class="grid-item">
-                        <img class="icon" src="assets/img/credits/colon.png">
-                        <a href="https://twitter.com/TheRealGDColon" target="_blank" class="gold">Colon</a>
-                    </div>
-                    <div class="grid-item">
-                        <img class="icon" src="assets/img/credits/spacedream.png">
-                        <a href="https://twitter.com/space_sd" target="_blank" class="gold">SpaceDream</a>
-                    </div> -->
-
                         <?php
 
                           $colaboradores = $conn->query("SELECT * FROM colaboradores");
