@@ -119,7 +119,7 @@ $categories = $conn->query("SELECT * FROM categorias");
         </div>
     </div>
     <?php endforeach ?>
-    <p class="info" style="margin-top: 24px">Guia del Editor – v1.1.0</span>
+    <p class="info" style="margin-top: 24px">Guia del Editor – v<?php echo $version;?></span>
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://unpkg.com/tippy.js@6"></script>
         <script src="assets/js/index.js"></script>

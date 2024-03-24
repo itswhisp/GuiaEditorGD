@@ -10,5 +10,6 @@
 
 $dominio = "localhost"; # Dominio en el que se encuentra la pagina
 $maintenance = false; # Modo mantenimiento
+$version = "1.1.0";
 
 ?>
