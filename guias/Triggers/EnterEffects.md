@@ -1,4 +1,4 @@
-## Enter Effects
+## Efectos de entrada
 Changes how blocks enter and/or exit the screen.
 
 - **Target Enter Channel:** Input a Enter Channel ID and assign an Enter Channel ID to objects. The Enter Effect will only affect the objects with the same Enter Channel ID. By default, all blocks will be affected.

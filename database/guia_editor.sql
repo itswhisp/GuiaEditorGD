@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-03-2024 a las 05:16:11
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 24-03-2024 a las 06:09:33
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -156,8 +156,8 @@ INSERT INTO `secciones` (`id_seccion`, `nombre_seccion`, `titulo`, `seccion_url`
 (55, 'ShowHide', 'Show/Hide', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/fff59f808f4fcfc93a33dc3a866ef2c08f7ecaab/guias/Triggers/ShowHide.md', 1, NULL, 1, 1, 4),
 (56, 'BGEffect', 'BG Effect On/Off', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/fff59f808f4fcfc93a33dc3a866ef2c08f7ecaab/guias/Triggers/BGEffect.md', 1, NULL, 1, 1, 4),
 (57, 'Gradient', 'Gradient', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/fff59f808f4fcfc93a33dc3a866ef2c08f7ecaab/guias/Triggers/Gradient.md', 1, 'assets/img/triggers/Gradient.png', 0, 1, 4),
-(58, 'EnterEffects', 'Enter Effects', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/fff59f808f4fcfc93a33dc3a866ef2c08f7ecaab/guias/Triggers/EnterEffects.md', 0, NULL, 0, 1, 4),
-(59, 'EnterTriggers', 'Move/Rotate/Scale/Fade/Tint Enter', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/main/guias/Triggers/EnterTriggers.md', 1, NULL, 1, 1, 4),
+(58, 'EnterEffects', 'Efectos de entrada', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/fff59f808f4fcfc93a33dc3a866ef2c08f7ecaab/guias/Triggers/EnterEffects.md', 0, NULL, 0, 1, 4),
+(59, 'EnterTriggers', 'Enter Triggers', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/main/guias/Triggers/EnterTriggers.md', 1, NULL, 1, 1, 4),
 (60, 'StopEnter', 'Stop Enter', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/fff59f808f4fcfc93a33dc3a866ef2c08f7ecaab/guias/Triggers/StopEnter.md', 1, 'assets/img/triggers/EnterStop.png', 0, 1, 4),
 (61, 'CameraZoom', 'Zoom', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/main/guias/Triggers/CameraZoom.md', 1, 'assets/img/triggers/CameraZoom.png', 0, 1, 5),
 (62, 'CameraStatic', 'Static Camera', 'https://github.com/ItsWhisp/GuiaEditorGD/raw/main/guias/Triggers/CameraStatic.md', 1, 'assets/img/triggers/CameraStatic.png', 0, 1, 5),

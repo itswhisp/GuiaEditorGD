@@ -1,4 +1,4 @@
-## Move/Rotate/Scale/Fade/Tint Enter
+## Enter Triggers
 Lets you create custom Enter Effects, similar to the default ones above. Due to
 these having many of the same settings, we will be explaining them all first
 and only mention specific ones below. Note that one block is equal to 30 for
