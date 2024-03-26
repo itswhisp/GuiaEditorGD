@@ -3,7 +3,7 @@
 require "../config/connection.php";
 require "../lib/Parsedown.php";
 
-$guide = $_GET['g'];
+$guide = filter_input(INPUT_GET, 'g', FILTER_SANITIZE_STRING);
 
 $stmt = $conn->prepare("SELECT * FROM secciones WHERE nombre_seccion = ?"); # Obtiene el valor $_GET de "g" para realizar una consulta a la DB
     $stmt->execute([$guide]); # Ejecuta de forma segura la consulta MySQL
