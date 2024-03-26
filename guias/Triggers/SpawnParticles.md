@@ -9,5 +9,5 @@ Spawns particles upon activating the Trigger. Note that the particles you want t
 - **Scale:** Changes the scale of the particles.
 - **Match Rot:** Makes the rotation of the spawned particles match. Only useful when "Particle Group" contains multiple particles without rotation set in their own settings.
 
-![](https://guia.jorge603.xyz/assets/img/figures/118.png)
+![](https://guia.editorgd.xyz/assets/img/figures/118.png)
 *Figure 7.32: Example usage of the Spawn Particle Trigger.*<br>
