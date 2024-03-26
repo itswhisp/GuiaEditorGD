@@ -47,7 +47,7 @@ if (empty($guide)) { # Condicional: "Si en la URL no se agrega un dato valido"
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/guia.css">
-    <!-- IMPORTANTE: DEJAR ESTO AQUI PARA QUE EL AJAX FUNCIONE CORRECTAMENTE -->
+    <!-- IMPORTANTE: DEJAR ESTO AQUI PARA QUE EL AJAX + JQUERY FUNCIONEN CORRECTAMENTE -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
